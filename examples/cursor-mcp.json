@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "vybe-solana-api": {
+    "vybe-solana-mcp": {
       "url": "https://docs.vybenetwork.com/mcp"
     }
   }

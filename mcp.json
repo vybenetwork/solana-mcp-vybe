@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "vybe-solana-api": {
+    "vybe-solana-mcp": {
       "command": "npx",
       "args": ["-y", "mcp-remote", "https://docs.vybenetwork.com/mcp"]
     }

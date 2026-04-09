@@ -1,6 +1,6 @@
 # solana-mcp-vybe
 
-Public **Model Context Protocol (MCP) registry metadata** for the Vybe Solana API MCP hosted on ReadMe.
+Public **Model Context Protocol (MCP) registry metadata** for **Vybe Solana MCP** (hosted on ReadMe).
 
 The live MCP endpoint is:
 
@@ -43,4 +43,4 @@ Use `examples/cursor-mcp.json` as the install snippet (users set their own `X-AP
 
 ## Registry server id
 
-Listed as **`io.github.vybenetwork/vybe-solana-api`** (set in `server.json` `name`).
+Registry id: **`io.github.vybenetwork/vybe-solana-api`** (`server.json` `name`; display title is **Vybe Solana MCP**).
