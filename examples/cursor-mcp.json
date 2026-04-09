@@ -1,10 +1,7 @@
 {
   "mcpServers": {
     "vybe-solana-api": {
-      "url": "https://docs.vybenetwork.com/mcp",
-      "headers": {
-        "X-API-KEY": "your-vybe-api-key"
-      }
+      "url": "https://docs.vybenetwork.com/mcp"
     }
   }
 }

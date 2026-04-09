@@ -2,16 +2,7 @@
   "mcpServers": {
     "vybe-solana-api": {
       "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://docs.vybenetwork.com/mcp",
-        "--header",
-        "X-API-KEY:${VYBE_API_KEY}"
-      ],
-      "env": {
-        "VYBE_API_KEY": ""
-      }
+      "args": ["-y", "mcp-remote", "https://docs.vybenetwork.com/mcp"]
     }
   }
 }

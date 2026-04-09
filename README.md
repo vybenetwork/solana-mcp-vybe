@@ -9,9 +9,9 @@ The live MCP endpoint is:
 This repository holds:
 
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions).
-- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. The [Open Plugins MCP spec](https://open-plugins.com/agent-builders/components/mcp-servers) expects a **`command`** (not only a remote `url`), so these files use **`npx mcp-remote`** to connect to the hosted MCP URL. Set **`VYBE_API_KEY`** in your environment (see [Vybe API keys](https://vybe.fyi)).
+- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use **`npx mcp-remote`** and the public MCP URL only — **no API key in the repo.** Add a **`X-API-KEY`** header (or env) in your client when you need tools that call the Vybe API (e.g. `execute-request`); keys come from [vybe.fyi](https://vybe.fyi).
 
-For native remote URL + headers (no `npx`), use `examples/cursor-mcp.json` in Cursor’s user config instead.
+`examples/cursor-mcp.json` is the same idea for native **`url`** config: URL only, optional headers in the client when needed.
 
 ## GitHub repository name
 
