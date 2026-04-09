@@ -6,15 +6,20 @@ The live MCP endpoint is:
 
 `https://docs.vybenetwork.com/mcp`
 
-This repository only holds `server.json` and automation to publish it to the [official MCP Registry](https://registry.modelcontextprotocol.io).
+This repository holds:
+
+- **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions).
+- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. The [Open Plugins MCP spec](https://open-plugins.com/agent-builders/components/mcp-servers) expects a **`command`** (not only a remote `url`), so these files use **`npx mcp-remote`** to connect to the hosted MCP URL. Set **`VYBE_API_KEY`** in your environment (see [Vybe API keys](https://vybe.fyi)).
+
+For native remote URL + headers (no `npx`), use `examples/cursor-mcp.json` in Cursor’s user config instead.
 
 ## GitHub repository name
 
-Create the org repo as **`vybenetwork/solana-mcp-vybe`** (folder name matches: starts with `solana-mcp`, includes **Vybe**).
+**`vybenetwork/solana-mcp-vybe`** (starts with `solana-mcp`, includes Vybe).
 
 ## Publish a new listing version
 
-1. Push this repo to `github.com/vybenetwork/solana-mcp-vybe`.
+1. Clone or use this repo at `github.com/vybenetwork/solana-mcp-vybe`.
 2. Tag and push (the workflow sets `server.json` `version` from the tag):
 
    ```bash
