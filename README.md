@@ -41,6 +41,14 @@ Publishing uses **GitHub OIDC** in Actions; no personal token secret is required
 
 Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; add `X-API-KEY` locally when you need **live API calls**.
 
-## Registry server id
+## Registry catalog id
 
-Registry **catalog id** (`server.json` `name`): **`io.github.vybenetwork/vybe-solana-api`**. It stays on this stable id because the [MCP Registry](https://registry.modelcontextprotocol.io) allows **only one server per remote MCP URL**; our URL was registered under this id first, so it cannot be renamed to `solana-mcp-vybe` without removing the old entry. **Display title** in clients is **Solana MCP by Vybe** (from `title`), which matches the repo name.
+Target id in `server.json` **`name`**: **`io.github.vybenetwork/solana-mcp-vybe`** (matches this repo).
+
+The [official registry](https://registry.modelcontextprotocol.io) does not offer self-service delete/unpublish ([FAQ](https://modelcontextprotocol.io/registry/faq)). The previous id **`io.github.vybenetwork/vybe-solana-api`** must be **removed by registry operators** before the same remote URL can be published under the new name.
+
+- **Deletion / migration request:** [modelcontextprotocol/registry#1151](https://github.com/modelcontextprotocol/registry/issues/1151)
+
+**After that issue is resolved**, publish by tagging (e.g. `v1.0.7`) or **Actions → Publish to MCP Registry**. Do **not** run a publish until then—the workflow will fail while the old entry still holds `https://docs.vybenetwork.com/mcp`.
+
+**Display title** everywhere: **Solana MCP by Vybe** (`server.json` `title`).
