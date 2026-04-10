@@ -3,7 +3,7 @@
   "name": "io.github.vybenetwork/vybe-solana-api",
   "title": "Solana MCP by Vybe",
   "description": "Solana MCP by Vybe: OpenAPI discovery, doc search, live API execution with your Vybe API key.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "url": "https://github.com/vybenetwork/solana-mcp-vybe",
     "source": "github"
