@@ -43,4 +43,4 @@ Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](ht
 
 ## Registry server id
 
-Registry id: **`io.github.vybenetwork/solana-mcp-vybe`** (`server.json` `name`; display title is **Solana MCP by Vybe**).
+Registry **catalog id** (`server.json` `name`): **`io.github.vybenetwork/vybe-solana-api`**. It stays on this stable id because the [MCP Registry](https://registry.modelcontextprotocol.io) allows **only one server per remote MCP URL**; our URL was registered under this id first, so it cannot be renamed to `solana-mcp-vybe` without removing the old entry. **Display title** in clients is **Solana MCP by Vybe** (from `title`), which matches the repo name.
