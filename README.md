@@ -43,12 +43,8 @@ Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](ht
 
 ## Registry catalog id
 
-Target id in `server.json` **`name`**: **`io.github.vybenetwork/solana-mcp-vybe`** (matches this repo).
+**Active** `server.json` **`name`** (required until the URL is freed): **`io.github.vybenetwork/vybe-solana-api`**. **Display title:** **Solana MCP by Vybe**.
 
-The [official registry](https://registry.modelcontextprotocol.io) does not offer self-service delete/unpublish ([FAQ](https://modelcontextprotocol.io/registry/faq)). The previous id **`io.github.vybenetwork/vybe-solana-api`** must be **removed by registry operators** before the same remote URL can be published under the new name.
+**Desired rename** to **`io.github.vybenetwork/solana-mcp-vybe`** is blocked: one remote MCP URL per catalog entry. Track **[registry#1151](https://github.com/modelcontextprotocol/registry/issues/1151)**. After operators remove the old binding, switch `name` and publish again.
 
-- **Deletion / migration request:** [modelcontextprotocol/registry#1151](https://github.com/modelcontextprotocol/registry/issues/1151)
-
-**After that issue is resolved**, publish by tagging (e.g. `v1.0.7`) or **Actions → Publish to MCP Registry**. Do **not** run a publish until then—the workflow will fail while the old entry still holds `https://docs.vybenetwork.com/mcp`.
-
-**Display title** everywhere: **Solana MCP by Vybe** (`server.json` `title`).
+**Publish:** push `main`, then `git tag vX.Y.Z && git push origin vX.Y.Z`, or **Actions → Publish to MCP Registry**.
