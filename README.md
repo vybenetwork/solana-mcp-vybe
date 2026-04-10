@@ -9,7 +9,7 @@ The live MCP endpoint is:
 This repository holds:
 
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions).
-- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use **`npx mcp-remote`** and the public MCP URL only — **no API key in the repo.** Add a **`X-API-KEY`** header (or env) in your client when you need tools that call the Vybe API (e.g. `execute-request`); keys come from [vybe.fyi](https://vybe.fyi).
+- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use **`npx mcp-remote`** and the public MCP URL only — **no API key in the repo.** Add a **`X-API-KEY`** header (or env) in your client when you need **live Solana API calls** (not just schema browsing); keys come from [vybe.fyi](https://vybe.fyi).
 
 `examples/cursor-mcp.json` is the same idea for native **`url`** config: URL only, optional headers in the client when needed.
 
@@ -39,7 +39,7 @@ Publishing uses **GitHub OIDC** in Actions; no personal token secret is required
 
 ## Cursor and other directories
 
-Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; add `X-API-KEY` locally when you need `execute-request`.
+Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; add `X-API-KEY` locally when you need **live API calls**.
 
 ## Registry server id
 

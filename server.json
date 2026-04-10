@@ -2,8 +2,9 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.vybenetwork/vybe-solana-api",
   "title": "Solana MCP by Vybe",
-  "description": "Solana MCP by Vybe: OpenAPI discovery, doc search, live API execution with your Vybe API key.",
-  "version": "1.0.1",
+  "description": "Solana MCP by Vybe: OpenAPI discovery, doc search, remote Solana API. API key for live API calls.",
+  "version": "1.0.4",
+  "websiteUrl": "https://docs.vybenetwork.com/docs/mcp",
   "repository": {
     "url": "https://github.com/vybenetwork/solana-mcp-vybe",
     "source": "github"
@@ -15,7 +16,7 @@
       "headers": [
         {
           "name": "X-API-KEY",
-          "description": "Vybe API key from https://vybe.fyi (required for execute-request and authenticated calls)",
+          "description": "API key for authenticated Solana API calls (get yours at https://vybe.fyi)",
           "isRequired": true,
           "isSecret": true,
           "format": "string"
