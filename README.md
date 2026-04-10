@@ -43,4 +43,4 @@ Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](ht
 
 ## Registry server id
 
-Registry id: **`io.github.vybenetwork/vybe-solana-api`** (`server.json` `name`; display title is **Solana MCP by Vybe**).
+Registry id: **`io.github.vybenetwork/solana-mcp-vybe`** (`server.json` `name`; display title is **Solana MCP by Vybe**).
