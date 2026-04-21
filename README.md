@@ -1,4 +1,5 @@
-# solana-mcp-vybe
+# Solana MCP by Vybe
+Solana MCP by Vybe lets Cursor, Claude, and other MCP clients browse schemas or make live Solana API calls through one public MCP server.
 
 Public **Model Context Protocol (MCP) registry metadata** for **Solana MCP by Vybe** (hosted on ReadMe).
 
