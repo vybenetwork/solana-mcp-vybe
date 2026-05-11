@@ -34,6 +34,8 @@ This repository holds:
 
 Publishing uses **GitHub OIDC** in Actions; no personal token secret is required.
 
+**If you use `mcp-publisher login github` locally** and get **403** for `io.github.vybenetwork/...`: Git apps like **Git Credential Manager** are unrelated. Open **GitHub → Settings → Applications → Authorized OAuth Apps**, choose the app you authorized during **`mcp-publisher login github`** (device flow), then under **Organization access** click **Grant** for **`vybenetwork`**. On SAML-enforced orgs, also complete **SSO** for that OAuth app. Then run **`mcp-publisher logout`**, **`mcp-publisher login github`**, and **`publish`** again.
+
 3. Verify:
 
    ```bash
