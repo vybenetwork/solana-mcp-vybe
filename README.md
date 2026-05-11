@@ -1,18 +1,20 @@
 # Solana MCP by Vybe
 Solana MCP by Vybe lets Cursor, Claude, and other MCP clients browse schemas or make live Solana API calls through one public MCP server.
 
-Public **Model Context Protocol (MCP) registry metadata** for **Solana MCP by Vybe** (hosted on ReadMe).
+Public **Model Context Protocol (MCP) registry metadata** for **Solana MCP by Vybe**.
 
 The live MCP endpoint is:
 
-`https://docs.vybenetwork.com/mcp`
+`https://mcp.vybenetwork.xyz`
+
+Product and setup guides: [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp).
 
 This repository holds:
 
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions).
-- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use **`npx mcp-remote`** and the public MCP URL only — **no API key in the repo.** Add a **`X-API-KEY`** header (or env) in your client when you need **live Solana API calls** (not just schema browsing); keys come from [vybe.fyi](https://vybe.fyi).
+- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use **`npx mcp-remote`** and the MCP URL only — **no secrets in the repo.** Clients authenticate via **OAuth** for this host (see discovery on `https://mcp.vybenetwork.xyz`).
 
-`examples/cursor-mcp.json` is the same idea for native **`url`** config: URL only, optional headers in the client when needed.
+`examples/cursor-mcp.json` is the same idea for native **`url`** config: URL only; use your client’s OAuth flow for this MCP.
 
 ## GitHub repository name
 
@@ -40,12 +42,10 @@ Publishing uses **GitHub OIDC** in Actions; no personal token secret is required
 
 ## Cursor and other directories
 
-Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; add `X-API-KEY` locally when you need **live API calls**.
+Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; use **OAuth** (or whatever your client supports) for `https://mcp.vybenetwork.xyz`.
 
 ## Registry catalog id
 
-**Active** `server.json` **`name`** (required until the URL is freed): **`io.github.vybenetwork/vybe-solana-api`**. **Display title:** **Solana MCP by Vybe**.
-
-**Desired rename** to **`io.github.vybenetwork/solana-mcp-vybe`** is blocked: one remote MCP URL per catalog entry. Track **[registry#1151](https://github.com/modelcontextprotocol/registry/issues/1151)**. After operators remove the old binding, switch `name` and publish again.
+**`server.json` `name`:** **`io.github.vybenetwork/solana-mcp-vybe`**. **Display title:** **Solana MCP by Vybe**.
 
 **Publish:** push `main`, then `git tag vX.Y.Z && git push origin vX.Y.Z`, or **Actions → Publish to MCP Registry**.

@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.vybenetwork/vybe-solana-api",
+  "name": "io.github.vybenetwork/solana-mcp-vybe",
   "title": "Solana MCP by Vybe",
   "description": "Solana MCP for wallets, trades, markets, PnL, transfers, onchain data, signable swaps and API tools.",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "websiteUrl": "https://docs.vybenetwork.com/docs/mcp",
   "repository": {
     "url": "https://github.com/vybenetwork/solana-mcp-vybe",
@@ -12,16 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://docs.vybenetwork.com/mcp",
-      "headers": [
-        {
-          "name": "X-API-KEY",
-          "description": "API key for authenticated Solana API calls (get yours at https://vybe.fyi)",
-          "isRequired": true,
-          "isSecret": true,
-          "format": "string"
-        }
-      ]
+      "url": "https://mcp.vybenetwork.xyz"
     }
   ]
 }
