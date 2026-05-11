@@ -3,7 +3,7 @@
   "name": "io.github.vybenetwork/solana-mcp-vybe",
   "title": "Solana MCP by Vybe",
   "description": "Solana MCP for wallets, trades, markets, PnL, transfers, onchain data, signable swaps and API tools.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "websiteUrl": "https://docs.vybenetwork.com/docs/mcp",
   "repository": {
     "url": "https://github.com/vybenetwork/solana-mcp-vybe",
