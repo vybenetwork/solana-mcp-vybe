@@ -5,14 +5,14 @@ Public **Model Context Protocol (MCP) registry metadata** for **Solana MCP by Vy
 
 The live MCP endpoint is:
 
-`https://mcp.vybenetwork.xyz`
+`https://mcp.vybenetwork.com`
 
-Product and setup guides: [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp).
+Product and setup guides: [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp)
 
 This repository holds:
 
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions).
-- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use **`npx mcp-remote`** and the MCP URL only — **no secrets in the repo.** Clients authenticate via **OAuth** for this host (see discovery on `https://mcp.vybenetwork.xyz`).
+- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use **`npx mcp-remote`** and the MCP URL only — **no secrets in the repo.** Clients authenticate via **OAuth** for this host (see discovery on `https://mcp.vybenetwork.com`).
 
 `examples/cursor-mcp.json` is the same idea for native **`url`** config: URL only; use your client’s OAuth flow for this MCP.
 
@@ -22,7 +22,7 @@ This repository holds:
 
 ## Publish a new listing version
 
-1. Clone or use this repo at `github.com/vybenetwork/solana-mcp-vybe`.
+1. Clone or use this repo at `github.com/vybenetwork/solana-mcp-vybe`
 2. Tag and push (the workflow sets `server.json` `version` from the tag):
 
    ```bash
@@ -44,7 +44,7 @@ Publishing uses **GitHub OIDC** in Actions; no personal token secret is required
 
 ## Cursor and other directories
 
-Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; use **OAuth** (or whatever your client supports) for `https://mcp.vybenetwork.xyz`.
+Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; use **OAuth** (or whatever your client supports) for `https://mcp.vybenetwork.com`.
 
 ## Registry catalog id
 
