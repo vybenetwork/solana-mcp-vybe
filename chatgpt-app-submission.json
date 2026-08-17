@@ -1,0 +1,140 @@
+{
+  "$schema": "https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json",
+  "schema_version": 1,
+  "app_info": {
+    "display_name": "Solana MCP by Vybe",
+    "subtitle": "Find wallets, trades, markets",
+    "description": "Solana MCP by Vybe is a developer toolkit for live Solana data: wallets, trades, markets, PnL, transfers, on-chain activity, signable swaps, and API tools. Ask for a wallet’s balances, realized and unrealized PnL, counterparties, or token holdings; look up token prices, holders, liquidity, and candles; scan markets, DEX activity, trade history, and transfers; or pull top traders and labeled accounts without leaving ChatGPT.\n\nBrowse the Vybe API catalog, inspect an endpoint’s parameters, then run authenticated live queries and get real results back. When you need a swap, the app can return an unsigned transaction to sign in your own wallet. Connect with OAuth on mcp.vybenetwork.xyz. It does not take private keys, and it does not broadcast transactions for you.",
+    "category": "DEVELOPER_TOOLS"
+  },
+  "tools": {
+    "list-endpoints": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Only returns the catalog of Vybe API paths, HTTP methods, and summaries and does not create or update any data.",
+        "open_world_justification": "Reads the server's OpenAPI catalog and does not write to public internet state or third-party systems.",
+        "destructive_justification": "Does not delete, overwrite, revoke access, or perform irreversible actions."
+      }
+    },
+    "search-endpoints": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Only searches OpenAPI paths, operations, and parameters by keyword and returns matches without modifying data.",
+        "open_world_justification": "Searches local API metadata and does not write to public internet state or third-party systems.",
+        "destructive_justification": "Does not delete, overwrite, revoke access, or perform irreversible actions."
+      }
+    },
+    "get-endpoint": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Only retrieves OpenAPI details for one path and method, including parameters, schemas, and auth, without modifying data.",
+        "open_world_justification": "Returns stored API specification metadata and does not write to public internet state or third-party systems.",
+        "destructive_justification": "Does not delete, overwrite, revoke access, or perform irreversible actions."
+      }
+    },
+    "execute-request": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": true,
+        "destructiveHint": true
+      },
+      "justifications": {
+        "read_only_justification": "Sends live HTTP requests, including POST, PUT, PATCH, and DELETE, to the Vybe API rather than only fetching cached metadata.",
+        "open_world_justification": "Calls the external Vybe HTTP API using a caller-supplied URL, method, headers, and body.",
+        "destructive_justification": "Can invoke write-shaped Vybe routes that build unsigned swap, close-token-account, and withdraw-MEV transactions, and accepts mutating HTTP methods."
+      }
+    },
+    "pay-with-x402": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Only returns x402 pay-per-call integration guidance and does not sign, submit, or settle any payment.",
+        "open_world_justification": "Returns static integration instructions and does not write to public internet state or third-party systems.",
+        "destructive_justification": "Does not delete, overwrite, revoke access, or move funds."
+      }
+    }
+  },
+  "test_cases": [
+    {
+      "description": "List the full Vybe API catalog from schema discovery.",
+      "user_prompt": "List all available Vybe API endpoints.",
+      "file_attachment_urls": null,
+      "tools_triggered": "list-endpoints",
+      "expected_output": "Returns 35+ Vybe API paths with HTTP methods and summaries across tokens, wallets, markets, trades, transfers, and trading utilities.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Search the catalog for token-holder endpoints.",
+      "user_prompt": "Find all Vybe endpoints related to token holders.",
+      "file_attachment_urls": null,
+      "tools_triggered": "search-endpoints",
+      "expected_output": "Returns matching holder endpoints such as holder count history and top holders, with paths that can be passed to get-endpoint.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Inspect the Wallet PnL endpoint contract before querying it.",
+      "user_prompt": "Show me the parameters for the Wallet PnL endpoint.",
+      "file_attachment_urls": null,
+      "tools_triggered": "get-endpoint",
+      "expected_output": "Returns the OpenAPI spec for GET /v4/wallets/{ownerAddress}/pnl, including ownerAddress, resolution, sorting, pagination, auth, and response fields.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Run a live leaderboard query against the Vybe API.",
+      "user_prompt": "Get the top 3 Solana traders by realized PnL today.",
+      "file_attachment_urls": null,
+      "tools_triggered": "execute-request",
+      "expected_output": "Returns three trader wallets with realized PnL, win rate, volume, and related metrics from the live Top Traders endpoint.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Explain pay-per-call access when no API key is available.",
+      "user_prompt": "I don't have a Vybe API key. How can an AI agent pay per call in USDC to query token details?",
+      "file_attachment_urls": null,
+      "tools_triggered": "pay-with-x402",
+      "expected_output": "Returns x402 integration guidance, including the x402 API base URL, 402 payment flow, SDK usage, and that this tool itself does not move funds.",
+      "expected_output_url": null
+    }
+  ],
+  "negative_test_cases": [
+    {
+      "description": "Do not trigger for unrelated calendar requests.",
+      "user_prompt": "What meetings do I have tomorrow?",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should not be invoked because calendar lookup is outside its Solana API workflows.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not trigger for non-Solana chain analytics.",
+      "user_prompt": "Show me the top Ethereum token holders for USDC on Ethereum mainnet.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should not be invoked because it only covers Vybe's Solana API, not Ethereum holder data.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not trigger for signing or broadcasting transactions with user keys.",
+      "user_prompt": "Here is my Solana private key. Sign and send a swap transaction for me now.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The app should not be invoked to collect keys or broadcast transactions; it can only return unsigned swap payloads through the documented API when explicitly asked for quotes or transaction builds.",
+      "expected_output_url": null
+    }
+  ]
+}
