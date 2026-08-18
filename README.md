@@ -1,21 +1,82 @@
 # Solana MCP by Vybe
-Solana MCP by Vybe lets Cursor, Claude, and other MCP clients browse schemas or make live Solana API calls through one public MCP server.
+
+Solana MCP by Vybe lets Cursor, Claude, Codex, and other MCP clients browse schemas or make live Solana API calls through one public MCP server.
 
 Public **Model Context Protocol (MCP) registry metadata** for **Solana MCP by Vybe**.
 
-The live MCP endpoint is:
+## MCP endpoint
 
-`https://mcp.vybenetwork.xyz/mcp`
+Use the streamable HTTP endpoint:
 
-Product and setup guides: [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp)
+```text
+https://mcp.vybenetwork.xyz/mcp
+```
 
-This repository holds:
+Registry metadata (`server.json`) publishes the remote as:
 
-- **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions). Registry remotes use `https://mcp.vybenetwork.xyz`.
-- **`.mcp.json` and `mcp.json`** — [Open Plugins](https://open-plugins.com)–style MCP config at the repo root so directory UIs (e.g. Cursor “Submit a Plugin” with Auto GitHub scan) can detect a plugin component. They use native HTTP config for `https://mcp.vybenetwork.xyz/mcp` — **no secrets in the repo.** Clients authenticate via **OAuth**.
+```text
+https://mcp.vybenetwork.xyz
+```
+
+Clients that require an explicit MCP path (ChatGPT Developer Mode, Codex, Cursor HTTP) should use **`https://mcp.vybenetwork.xyz/mcp`**.
+
+Copy-paste setup for the public docs site: [`docs/mcp.md`](docs/mcp.md). Live product guides: [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp) (still may show the old `.com` host until that site is updated).
+
+## Quick setup
+
+### Cursor / Windsurf / Codex-style HTTP
+
+```json
+{
+  "mcpServers": {
+    "solana-mcp-vybe": {
+      "type": "http",
+      "url": "https://mcp.vybenetwork.xyz/mcp"
+    }
+  }
+}
+```
+
+Same snippet: [`examples/cursor-mcp.json`](examples/cursor-mcp.json).
+
+### Claude Desktop via `mcp-remote`
+
+```json
+{
+  "mcpServers": {
+    "solana-mcp-vybe": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.vybenetwork.xyz/mcp"]
+    }
+  }
+}
+```
+
+### Claude.ai custom connector
+
+```text
+Name: Solana MCP by Vybe
+URL:  https://mcp.vybenetwork.xyz/mcp
+```
+
+Authenticate with **OAuth** when the client prompts. Do not commit API keys into this repo.
+
+## What this repository holds
+
+- **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions). Remote URL: `https://mcp.vybenetwork.xyz`.
+- **`.mcp.json` and `mcp.json`** — root MCP/plugin configs for directory UIs (e.g. Cursor “Submit a Plugin”). Native HTTP to `https://mcp.vybenetwork.xyz/mcp` — **no secrets**.
 - **`.codex-plugin/plugin.json`** — Codex plugin metadata for local install/refresh against the same MCP URL.
+- **`chatgpt-app-submission.json`** — draft ChatGPT Apps submission fields.
 
-`examples/cursor-mcp.json` is the same native HTTP config; use your client’s OAuth flow for this MCP.
+## Available tools
+
+| Tool | Description |
+| --- | --- |
+| `list-endpoints` | Browse API paths with methods and summaries |
+| `search-endpoints` | Search paths, operations, and schemas by keyword |
+| `get-endpoint` | Full OpenAPI details for one path and method |
+| `execute-request` | Live authenticated API calls |
+| `pay-with-x402` | x402 pay-per-call integration guidance |
 
 ## GitHub repository name
 
@@ -45,7 +106,7 @@ Publishing uses **GitHub OIDC** in Actions; no personal token secret is required
 
 ## Cursor and other directories
 
-Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; use **OAuth** (or whatever your client supports) for `https://mcp.vybenetwork.xyz/mcp`.
+Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; use **OAuth** for `https://mcp.vybenetwork.xyz/mcp`.
 
 ## Registry catalog id
 
