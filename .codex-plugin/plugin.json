@@ -30,7 +30,10 @@
       "List the available Vybe Solana API endpoints.",
       "Show the parameters for the Wallet PnL endpoint.",
       "Find endpoints related to token holders."
-    ]
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo-dark.png"
   },
   "mcpServers": "./.mcp.json"
 }
