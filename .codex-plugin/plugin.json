@@ -18,7 +18,7 @@
   "interface": {
     "displayName": "Solana MCP by Vybe",
     "shortDescription": "Explore live Solana tokens, traders, markets, and wallets.",
-    "longDescription": "Solana MCP by Vybe connects Codex to Vybe’s live Solana data and API toolkit: wallets, trades, markets, PnL, transfers, on-chain activity, signable swaps, and endpoint discovery. Ask for a wallet’s balances, realized and unrealized PnL, counterparties, or token holdings; look up token prices, holders, liquidity, and candles; scan markets, DEX activity, trade history, and transfers; or pull top traders and labeled accounts without leaving Codex.\n\nBrowse the Vybe API catalog, inspect an endpoint’s parameters, then run authenticated live queries and get real results back. When you need a swap, the server can return an unsigned transaction to sign in your own wallet. Connect with OAuth at https://mcp.vybenetwork.xyz/mcp. It does not take private keys, and it does not broadcast transactions for you.",
+    "longDescription": "Solana MCP by Vybe connects Codex to Vybe’s live Solana data and API toolkit: wallets, trades, markets, PnL, transfers, on-chain activity, signable swaps, and endpoint discovery. Ask for a wallet’s balances, realized and unrealized PnL, counterparties, or token holdings; look up token prices, holders, liquidity, and candles; scan markets, DEX activity, trade history, and transfers; or pull top traders and labeled accounts without leaving Codex.\n\nBrowse the Vybe API catalog, inspect an endpoint’s parameters, then run authenticated live queries and get real results back.",
     "developerName": "Vybe Network",
     "category": "Developer Tools",
     "capabilities": [
