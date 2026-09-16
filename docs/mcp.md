@@ -56,7 +56,9 @@ Authenticate with OAuth when prompted. Do not put API keys in git.
 | `list-endpoints` | Browse all API paths with methods and summaries |
 | `search-endpoints` | Deep search across paths, operations, and schemas |
 | `get-endpoint` | Full OpenAPI spec for a specific endpoint |
-| `execute-request` | Live API calls |
+| `query-vybe-api` | Live read of any `/v4` GET endpoint |
+| `query-vybe-api-batch` | Live read across many wallets in one call |
+| `build-vybe-transaction` | Unsigned swap / close-account / withdraw-MEV payload |
 | `pay-with-x402` | x402 pay-per-call integration guidance |
 
 ## Test prompts

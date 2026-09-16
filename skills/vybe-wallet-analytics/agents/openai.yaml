@@ -1,0 +1,15 @@
+interface:
+  display_name: "Vybe wallet analytics"
+  short_description: "Balances, PnL, transfers for Solana wallets"
+  default_prompt: "Analyze this Solana wallet with Vybe: balances, holdings, and PnL."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "solana-mcp-vybe"
+      description: "Vybe Solana MCP server"
+      transport: "streamable_http"
+      url: "https://mcp.vybenetwork.xyz/mcp"

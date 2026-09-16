@@ -44,16 +44,40 @@
         "destructive_justification": "Does not delete, overwrite, revoke access, or perform irreversible actions."
       }
     },
-    "execute-request": {
+    "query-vybe-api": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Issues GET requests only. The tool takes no HTTP method parameter and the server always sends GET, so it cannot create, update, or delete any data.",
+        "open_world_justification": "Calls the live Vybe Solana API over the public internet and returns on-chain data about arbitrary wallets, tokens, and markets.",
+        "destructive_justification": "Read-only GET requests cannot delete, overwrite, revoke access, or perform irreversible actions."
+      }
+    },
+    "query-vybe-api-batch": {
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": true,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "Restricted by the server to the five /v4/wallets/batch/* read endpoints, which accept a POST body only to carry the list of wallet addresses and return balances and history without modifying data.",
+        "open_world_justification": "Calls the live Vybe Solana API over the public internet and returns on-chain data for caller-supplied wallet addresses.",
+        "destructive_justification": "The allowlisted batch endpoints only read wallet data and cannot delete, overwrite, or revoke anything."
+      }
+    },
+    "build-vybe-transaction": {
       "annotations": {
         "readOnlyHint": false,
         "openWorldHint": true,
         "destructiveHint": true
       },
       "justifications": {
-        "read_only_justification": "Sends live HTTP requests, including POST, PUT, PATCH, and DELETE, to the Vybe API rather than only fetching cached metadata.",
-        "open_world_justification": "Calls the external Vybe HTTP API using a caller-supplied URL, method, headers, and body.",
-        "destructive_justification": "Can invoke write-shaped Vybe routes that build unsigned swap, close-token-account, and withdraw-MEV transactions, and accepts mutating HTTP methods."
+        "read_only_justification": "Constructs a new unsigned Solana transaction rather than only reading existing data, so it is not a pure read.",
+        "open_world_justification": "Calls the live Vybe Solana API over the public internet to price routes and build the transaction against current on-chain state.",
+        "destructive_justification": "Marked destructive so the user is always prompted before a swap, token-account close, or MEV withdrawal payload is produced. The tool itself returns only a base64 unsigned transaction and never signs, submits, or broadcasts it, and never accepts private keys."
       }
     },
     "pay-with-x402": {
@@ -98,7 +122,7 @@
       "description": "Run a live leaderboard query against the Vybe API.",
       "user_prompt": "Get the top 3 Solana traders by realized PnL today.",
       "file_attachment_urls": null,
-      "tools_triggered": "execute-request",
+      "tools_triggered": "query-vybe-api",
       "expected_output": "Returns three trader wallets with realized PnL, win rate, volume, and related metrics from the live Top Traders endpoint.",
       "expected_output_url": null
     },

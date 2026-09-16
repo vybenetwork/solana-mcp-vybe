@@ -47,5 +47,6 @@
     "logo": "./assets/logo.png",
     "logoDark": "./assets/logo-dark.png"
   },
+  "skills": "./skills/",
   "mcpServers": "./.mcp.json"
 }

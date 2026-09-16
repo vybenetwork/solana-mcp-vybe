@@ -1,0 +1,15 @@
+interface:
+  display_name: "Vybe API explorer"
+  short_description: "Discover, inspect, and call Vybe Solana APIs"
+  default_prompt: "Help me find the right Vybe API endpoint and run a live request."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "solana-mcp-vybe"
+      description: "Vybe Solana MCP server"
+      transport: "streamable_http"
+      url: "https://mcp.vybenetwork.xyz/mcp"

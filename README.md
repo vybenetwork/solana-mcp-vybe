@@ -75,7 +75,9 @@ Authenticate with **OAuth** when the client prompts. Do not commit API keys into
 | `list-endpoints` | Browse API paths with methods and summaries |
 | `search-endpoints` | Search paths, operations, and schemas by keyword |
 | `get-endpoint` | Full OpenAPI details for one path and method |
-| `execute-request` | Live authenticated API calls |
+| `query-vybe-api` | Live authenticated read of any `/v4` GET endpoint |
+| `query-vybe-api-batch` | Live authenticated read across many wallets in one call |
+| `build-vybe-transaction` | Unsigned swap / close-account / withdraw-MEV payload |
 | `pay-with-x402` | x402 pay-per-call integration guidance |
 
 ## GitHub repository name
