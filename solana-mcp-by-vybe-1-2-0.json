@@ -1,0 +1,1044 @@
+{
+  "id": "asdk_app_v_6a8366c424dc819190f1ec9788349a4d",
+  "status": "REVIEW",
+  "assert_compliance": true,
+  "brand_color": null,
+  "brand_color_dark": null,
+  "branding": {
+    "contact_email": null,
+    "customer_support": "https://vybe.fyi/settings/api",
+    "physical_address": null,
+    "privacy_policy": "https://vybe.fyi/privacy",
+    "terms_of_service": "https://vybe.fyi/terms",
+    "website": "https://docs.vybenetwork.com"
+  },
+  "callback_id": "W61KQEvfwYn2",
+  "categories": null,
+  "commerce_agreement": null,
+  "commerce_agreement_explanation": null,
+  "commerce_enabled": false,
+  "complies_with_all_laws_and_regulations": true,
+  "composer_icon": {
+    "file_id": "file_00000000828881fbbc52cf8a40ed88ae",
+    "url": "https://files.openai.com/content?id=file_00000000828881fbbc52cf8a40ed88ae&cdn=1&cp=pi&ma=32486400&ts=0&p=pi&cid=8&sig=be4b938963a85f51d2d49b041281719550044f64f7cbcbc79c0be376d04de131&v=0"
+  },
+  "composer_icon_dark": {
+    "file_id": "file_00000000828881fbbc52cf8a40ed88ae",
+    "url": "https://files.openai.com/content?id=file_00000000828881fbbc52cf8a40ed88ae&cdn=1&cp=pi&ma=32486400&ts=0&p=pi&cid=8&sig=be4b938963a85f51d2d49b041281719550044f64f7cbcbc79c0be376d04de131&v=0"
+  },
+  "country_filtering": null,
+  "demo_recording_url": "https://solana-swap-api.vybenetwork.com/vybe-mcp-demo-openai.mp4",
+  "description": "Solana MCP by Vybe is a developer toolkit for live Solana data. Use it for wallets, trades, markets, PnL, transfers, on-chain activity, signable swaps, and API tools.\n\nAsk for a wallet’s balances, realized and unrealized PnL, counterparties, or token holdings. Look up token prices, holders, liquidity, and candles. Scan markets, DEX activity, trade history, and transfers. Pull top traders and labeled accounts without leaving ChatGPT.\n\nBrowse the Vybe API catalog and inspect an endpoint’s parameters. Then run authenticated live queries and get real results back. When you need a swap, the app can return an unsigned transaction to sign in your own wallet.",
+  "developer_identity_name": "Vybe",
+  "developer_name": "Vybe",
+  "display_name": "Solana MCP by Vybe",
+  "entity_type": "business",
+  "frame_domain_enabled": false,
+  "frame_domain_explanation": null,
+  "has_rights_to_3p_content": true,
+  "icons": {
+    "original": {
+      "file_id": "file_000000006fa0820c9e5378b7eb5cbf1b",
+      "url": "https://files.openai.com/content?id=file_000000006fa0820c9e5378b7eb5cbf1b&cdn=1&cp=pi&ma=30672000&ts=0&p=pi&cid=8&sig=0f4f291d2b15043ab60d24391bb09ad61c32f8009c2b465ec5176ec965810d2a&v=0"
+    },
+    "256_square": {
+      "file_id": "file_000000005184822fbfee13c90ec90a79",
+      "url": "https://files.openai.com/content?id=file_000000005184822fbfee13c90ec90a79&cdn=1&cp=pi&ma=31449600&ts=0&p=pi&cid=8&sig=88ffb070d341c369351529db4bc87a9e96984e61fb349c33513d0ef718128adb&v=0"
+    },
+    "256_circle": {
+      "file_id": "file_00000000cd8c81f9be84a057af6cca6d",
+      "url": "https://files.openai.com/content?id=file_00000000cd8c81f9be84a057af6cca6d&cdn=1&cp=pi&ma=30931200&ts=0&p=pi&cid=8&sig=72d67004f2bd8e1a291942a0b81ab3c74ccfa2f8ccd0b477ccba9f8ed24237bc&v=0"
+    }
+  },
+  "icons_dark": {
+    "original": {
+      "file_id": "file_000000006fa0820c9e5378b7eb5cbf1b",
+      "url": "https://files.openai.com/content?id=file_000000006fa0820c9e5378b7eb5cbf1b&cdn=1&cp=pi&ma=30672000&ts=0&p=pi&cid=8&sig=0f4f291d2b15043ab60d24391bb09ad61c32f8009c2b465ec5176ec965810d2a&v=0"
+    },
+    "256_square": {
+      "file_id": "file_000000005184822fbfee13c90ec90a79",
+      "url": "https://files.openai.com/content?id=file_000000005184822fbfee13c90ec90a79&cdn=1&cp=pi&ma=31449600&ts=0&p=pi&cid=8&sig=88ffb070d341c369351529db4bc87a9e96984e61fb349c33513d0ef718128adb&v=0"
+    },
+    "256_circle": {
+      "file_id": "file_00000000cd8c81f9be84a057af6cca6d",
+      "url": "https://files.openai.com/content?id=file_00000000cd8c81f9be84a057af6cca6d&cdn=1&cp=pi&ma=30931200&ts=0&p=pi&cid=8&sig=72d67004f2bd8e1a291942a0b81ab3c74ccfa2f8ccd0b477ccba9f8ed24237bc&v=0"
+    }
+  },
+  "initialized": false,
+  "intended_audience": "all_ages",
+  "is_health_related": null,
+  "logo_url": null,
+  "logo_url_dark": null,
+  "mcp": {
+    "type": "metadata_populated",
+    "mcp_url": "https://mcp.vybenetwork.xyz/mcp",
+    "requires_mtls": false,
+    "supported_auth": [
+      {
+        "type": "OAUTH",
+        "registration_url": "https://mcp.vybenetwork.xyz/register",
+        "authorization_url": "https://mcp.vybenetwork.xyz/authorize",
+        "token_url": "https://mcp.vybenetwork.xyz/token",
+        "scope_separator": " ",
+        "scope_param": "scope",
+        "pkce_required": true,
+        "pkce_methods": [
+          "S256"
+        ],
+        "allow_http_redirect": true,
+        "supports_domain_restriction": true,
+        "authorization_server_base": "https://mcp.vybenetwork.xyz",
+        "authorization_server_issuer": "https://mcp.vybenetwork.xyz",
+        "base_scopes": [],
+        "default_scopes": [
+          "openid",
+          "email",
+          "mcp:read",
+          "mcp:write"
+        ],
+        "resource": "https://mcp.vybenetwork.xyz/mcp",
+        "scopes_supported": [
+          "openid",
+          "email",
+          "mcp:read",
+          "mcp:write"
+        ],
+        "token_endpoint_auth_methods_supported": [
+          "none"
+        ],
+        "oidc_configuration_url": "https://mcp.vybenetwork.xyz/.well-known/openid-configuration",
+        "oidc_enabled": true,
+        "use_cimd": true,
+        "oidc_scopes_supported": [
+          "openid",
+          "email",
+          "mcp:read",
+          "mcp:write"
+        ],
+        "oidc_userinfo_endpoint": "https://mcp.vybenetwork.xyz/userinfo",
+        "authorization_response_iss_parameter_supported": false,
+        "client_id_metadata_document_supported": true
+      }
+    ],
+    "policy_info": {
+      "safety_status": "SCANNED_SOFT_BLOCKED"
+    },
+    "resources": [
+      {
+        "name": "List API Endpoints",
+        "title": "List API Endpoints",
+        "description": "Lists all API paths and their HTTP methods with summaries, organized by path. Results can be passed directly into 'get-endpoint'.",
+        "action_name": "list-endpoints",
+        "input_json_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {},
+          "type": "object"
+        },
+        "output_json_schema": {
+          "additionalProperties": true,
+          "properties": {
+            "endpoints": {
+              "additionalProperties": {
+                "items": {
+                  "properties": {
+                    "method": {
+                      "type": "string"
+                    },
+                    "summary": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "capability_labels": [
+          "read_only"
+        ],
+        "provided_tool_annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "tool_invoking_message": "",
+        "tool_invoked_message": "",
+        "metadata": {},
+        "visibility": "public"
+      },
+      {
+        "name": "Get Endpoint Details",
+        "title": "Get Endpoint Details",
+        "description": "Gets detailed information about a specific API endpoint, including security schemes and servers",
+        "action_name": "get-endpoint",
+        "input_json_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "method": {
+              "description": "The HTTP method (e.g. GET, POST, PUT, DELETE).",
+              "type": "string"
+            },
+            "path": {
+              "description": "The API endpoint path (e.g. /api/v1/users).",
+              "type": "string"
+            }
+          },
+          "required": [
+            "path",
+            "method"
+          ],
+          "type": "object"
+        },
+        "output_json_schema": {
+          "additionalProperties": true,
+          "properties": {
+            "method": {
+              "type": "string"
+            },
+            "operation": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "path": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "capability_labels": [
+          "read_only"
+        ],
+        "provided_tool_annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "tool_invoking_message": "",
+        "tool_invoked_message": "",
+        "metadata": {},
+        "visibility": "public"
+      },
+      {
+        "name": "Search API Endpoints",
+        "title": "Search API Endpoints",
+        "description": "Performs a deep search through paths, operations, and parameters to discover relevant API endpoints. Use this tool to find specific API capabilities, required parameters, or data models based on search keywords. Results can be passed directly into 'get-endpoint'.",
+        "action_name": "search-endpoints",
+        "input_json_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "pattern": {
+              "description": "Search pattern (case-insensitive)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "type": "object"
+        },
+        "output_json_schema": {
+          "additionalProperties": true,
+          "properties": {
+            "matches": {
+              "items": {
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "summary": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "capability_labels": [
+          "read_only"
+        ],
+        "provided_tool_annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "tool_invoking_message": "",
+        "tool_invoked_message": "",
+        "metadata": {},
+        "visibility": "public"
+      },
+      {
+        "name": "Query Vybe Solana API",
+        "title": "Query Vybe Solana API",
+        "description": "Runs a read-only GET request against a documented /v4 path on the Vybe Solana API (see https://docs.vybenetwork.com) and returns live Solana data: token prices, holders, liquidity and candles; wallet balances, PnL, counterparties and DeFi positions; markets, trades, transfers, top traders and labeled accounts. Use list-endpoints or search-endpoints to find a path and get-endpoint to check its parameters first. This tool cannot create, modify, or delete anything.",
+        "action_name": "query-vybe-api",
+        "input_json_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "path": {
+              "description": "Vybe API path beginning with /v4, with any path parameters already substituted (e.g. /v4/wallets/HN7.../pnl).",
+              "type": "string"
+            },
+            "query": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "Optional query string parameters as name/value pairs (e.g. {\"limit\": \"3\", \"resolution\": \"1d\"}).",
+              "type": "object"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "type": "object"
+        },
+        "output_json_schema": {
+          "additionalProperties": true,
+          "properties": {
+            "body": {},
+            "status": {
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "capability_labels": [
+          "read_only",
+          "open_world"
+        ],
+        "provided_tool_annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "tool_invoking_message": "",
+        "tool_invoked_message": "",
+        "metadata": {},
+        "visibility": "public"
+      },
+      {
+        "name": "Query Vybe Solana API (Batch Wallets)",
+        "title": "Query Vybe Solana API (Batch Wallets)",
+        "description": "Reads Solana wallet data for many addresses in one call from the Vybe Solana API (see https://docs.vybenetwork.com). These endpoints use a POST body only to carry the list of wallet addresses; they do not create, modify, or delete any data. Use query-vybe-api for single-wallet and all other reads.",
+        "action_name": "query-vybe-api-batch",
+        "input_json_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "body": {
+              "additionalProperties": true,
+              "description": "JSON request body for the endpoint, typically the list of wallet addresses. Call get-endpoint for the exact schema.",
+              "type": "object"
+            },
+            "path": {
+              "description": "Batch read endpoint to call.",
+              "enum": [
+                "/v4/wallets/batch/token-balances",
+                "/v4/wallets/batch/token-balances-ts",
+                "/v4/wallets/batch/token-accounts-balance-ts",
+                "/v4/wallets/batch/dust-accounts",
+                "/v4/wallets/batch/empty-accounts"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "path",
+            "body"
+          ],
+          "type": "object"
+        },
+        "output_json_schema": {
+          "additionalProperties": true,
+          "properties": {
+            "body": {},
+            "status": {
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "capability_labels": [
+          "read_only",
+          "open_world"
+        ],
+        "provided_tool_annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "tool_invoking_message": "",
+        "tool_invoked_message": "",
+        "metadata": {},
+        "visibility": "public"
+      },
+      {
+        "name": "Build Unsigned Solana Transaction",
+        "title": "Build Unsigned Solana Transaction",
+        "description": "Builds an unsigned Solana transaction with the Vybe Solana API (see https://docs.vybenetwork.com) for a token swap, a token-account close, or an MEV withdrawal, and returns it as base64 for the user to review and sign in their own wallet. This tool never signs, submits, or broadcasts a transaction, never moves funds on its own, and never accepts private keys. Use query-vybe-api with /v4/trading/swap-quote first when the user only wants a price quote.",
+        "action_name": "build-vybe-transaction",
+        "input_json_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "body": {
+              "additionalProperties": true,
+              "description": "JSON request body for the endpoint. Call get-endpoint for the exact schema.",
+              "type": "object"
+            },
+            "path": {
+              "description": "Transaction builder endpoint to call.",
+              "enum": [
+                "/v4/trading/swap",
+                "/v4/wallets/util/close-token-accounts",
+                "/v4/wallets/util/withdraw-mev"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "path",
+            "body"
+          ],
+          "type": "object"
+        },
+        "output_json_schema": {
+          "additionalProperties": true,
+          "properties": {
+            "body": {},
+            "status": {
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "capability_labels": [
+          "open_world",
+          "destructive"
+        ],
+        "provided_tool_annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": true,
+          "idempotentHint": false,
+          "openWorldHint": true
+        },
+        "tool_invoking_message": "",
+        "tool_invoked_message": "",
+        "metadata": {},
+        "visibility": "public"
+      },
+      {
+        "name": "Pay With X402",
+        "title": "Pay With X402",
+        "description": "Before calling any Vybe endpoint without an API key (e.g. AI agent, throwaway script, premium-only path), use this to access the same endpoint via x402 pay-per-call USDC on Solana.",
+        "action_name": "pay-with-x402",
+        "input_json_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {},
+          "type": "object"
+        },
+        "output_json_schema": {
+          "additionalProperties": true,
+          "properties": {
+            "baseUrl": {
+              "type": "string"
+            },
+            "guidance": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "capability_labels": [
+          "read_only"
+        ],
+        "provided_tool_annotations": {
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "tool_invoking_message": "",
+        "tool_invoked_message": "",
+        "metadata": {},
+        "visibility": "public"
+      }
+    ]
+  },
+  "mcp_url": "https://mcp.vybenetwork.xyz/mcp",
+  "negative_test_cases": [
+    {
+      "description": "Do not trigger for unrelated calendar requests.",
+      "expected_output": "The app should not be invoked because calendar lookup is outside its Solana API workflows.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "user_prompt": "What meetings do I have tomorrow?"
+    },
+    {
+      "description": "Do not trigger for non-Solana chain analytics.",
+      "expected_output": "The app should not be invoked because it only covers Vybe's Solana API, not Ethereum holder data.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "user_prompt": "Show me the top Ethereum token holders for USDC on Ethereum mainnet."
+    },
+    {
+      "description": "Do not trigger for signing or broadcasting transactions with user keys.",
+      "expected_output": "The app should not be invoked to collect keys or broadcast transactions; it can only return unsigned swap payloads through the documented API when explicitly asked for quotes or transaction builds.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "user_prompt": "Here is my Solana private key. Sign and send a swap transaction for me now."
+    }
+  ],
+  "no_money_transfers_crypto_or_investment_trades": true,
+  "no_serving_or_displaying_advertisements": true,
+  "not_marketed_to_children_under_13": true,
+  "oauth_client": null,
+  "plugin_category": "developer tools",
+  "policy_info": {
+    "safety_status": "SCANNED_SOFT_BLOCKED"
+  },
+  "read_policy_guidelines": true,
+  "release_notes": "Tool surface split for clearer, safer permissions.\n- Replaced the general execute-request tool with three purpose-built tools\n- query-vybe-api: read-only GET access to any documented /v4 endpoint\n- query-vybe-api-batch: read-only multi-wallet lookups on five allowlisted batch endpoints\n- build-vybe-transaction: unsigned swap, close-token-account, and withdraw-MEV payloads on three allowlisted endpoints\n- Requests are now pinned server-side to api.vybenetwork.xyz and validated against a path allowlist\n- No tool accepts a caller-supplied HTTP method or hostname",
+  "resources": [
+    {
+      "name": "List API Endpoints",
+      "title": "List API Endpoints",
+      "description": "Lists all API paths and their HTTP methods with summaries, organized by path. Results can be passed directly into 'get-endpoint'.",
+      "action_name": "list-endpoints",
+      "input_json_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {},
+        "type": "object"
+      },
+      "output_json_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "endpoints": {
+            "additionalProperties": {
+              "items": {
+                "properties": {
+                  "method": {
+                    "type": "string"
+                  },
+                  "summary": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "capability_labels": [
+        "read_only"
+      ],
+      "provided_tool_annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "templates": null,
+      "supported_auth_override": null,
+      "tool_invoking_message": "",
+      "tool_invoked_message": "",
+      "metadata": {},
+      "description_model": null,
+      "visibility": "public"
+    },
+    {
+      "name": "Get Endpoint Details",
+      "title": "Get Endpoint Details",
+      "description": "Gets detailed information about a specific API endpoint, including security schemes and servers",
+      "action_name": "get-endpoint",
+      "input_json_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "method": {
+            "description": "The HTTP method (e.g. GET, POST, PUT, DELETE).",
+            "type": "string"
+          },
+          "path": {
+            "description": "The API endpoint path (e.g. /api/v1/users).",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "method"
+        ],
+        "type": "object"
+      },
+      "output_json_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "method": {
+            "type": "string"
+          },
+          "operation": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "capability_labels": [
+        "read_only"
+      ],
+      "provided_tool_annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "templates": null,
+      "supported_auth_override": null,
+      "tool_invoking_message": "",
+      "tool_invoked_message": "",
+      "metadata": {},
+      "description_model": null,
+      "visibility": "public"
+    },
+    {
+      "name": "Search API Endpoints",
+      "title": "Search API Endpoints",
+      "description": "Performs a deep search through paths, operations, and parameters to discover relevant API endpoints. Use this tool to find specific API capabilities, required parameters, or data models based on search keywords. Results can be passed directly into 'get-endpoint'.",
+      "action_name": "search-endpoints",
+      "input_json_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "pattern": {
+            "description": "Search pattern (case-insensitive)",
+            "type": "string"
+          }
+        },
+        "required": [
+          "pattern"
+        ],
+        "type": "object"
+      },
+      "output_json_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "matches": {
+            "items": {
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "summary": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "capability_labels": [
+        "read_only"
+      ],
+      "provided_tool_annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "templates": null,
+      "supported_auth_override": null,
+      "tool_invoking_message": "",
+      "tool_invoked_message": "",
+      "metadata": {},
+      "description_model": null,
+      "visibility": "public"
+    },
+    {
+      "name": "Query Vybe Solana API",
+      "title": "Query Vybe Solana API",
+      "description": "Runs a read-only GET request against a documented /v4 path on the Vybe Solana API (see https://docs.vybenetwork.com) and returns live Solana data: token prices, holders, liquidity and candles; wallet balances, PnL, counterparties and DeFi positions; markets, trades, transfers, top traders and labeled accounts. Use list-endpoints or search-endpoints to find a path and get-endpoint to check its parameters first. This tool cannot create, modify, or delete anything.",
+      "action_name": "query-vybe-api",
+      "input_json_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "path": {
+            "description": "Vybe API path beginning with /v4, with any path parameters already substituted (e.g. /v4/wallets/HN7.../pnl).",
+            "type": "string"
+          },
+          "query": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Optional query string parameters as name/value pairs (e.g. {\"limit\": \"3\", \"resolution\": \"1d\"}).",
+            "type": "object"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "type": "object"
+      },
+      "output_json_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "body": {},
+          "status": {
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "capability_labels": [
+        "read_only",
+        "open_world"
+      ],
+      "provided_tool_annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true
+      },
+      "templates": null,
+      "supported_auth_override": null,
+      "tool_invoking_message": "",
+      "tool_invoked_message": "",
+      "metadata": {},
+      "description_model": null,
+      "visibility": "public"
+    },
+    {
+      "name": "Query Vybe Solana API (Batch Wallets)",
+      "title": "Query Vybe Solana API (Batch Wallets)",
+      "description": "Reads Solana wallet data for many addresses in one call from the Vybe Solana API (see https://docs.vybenetwork.com). These endpoints use a POST body only to carry the list of wallet addresses; they do not create, modify, or delete any data. Use query-vybe-api for single-wallet and all other reads.",
+      "action_name": "query-vybe-api-batch",
+      "input_json_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "body": {
+            "additionalProperties": true,
+            "description": "JSON request body for the endpoint, typically the list of wallet addresses. Call get-endpoint for the exact schema.",
+            "type": "object"
+          },
+          "path": {
+            "description": "Batch read endpoint to call.",
+            "enum": [
+              "/v4/wallets/batch/token-balances",
+              "/v4/wallets/batch/token-balances-ts",
+              "/v4/wallets/batch/token-accounts-balance-ts",
+              "/v4/wallets/batch/dust-accounts",
+              "/v4/wallets/batch/empty-accounts"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "body"
+        ],
+        "type": "object"
+      },
+      "output_json_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "body": {},
+          "status": {
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "capability_labels": [
+        "read_only",
+        "open_world"
+      ],
+      "provided_tool_annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true
+      },
+      "templates": null,
+      "supported_auth_override": null,
+      "tool_invoking_message": "",
+      "tool_invoked_message": "",
+      "metadata": {},
+      "description_model": null,
+      "visibility": "public"
+    },
+    {
+      "name": "Build Unsigned Solana Transaction",
+      "title": "Build Unsigned Solana Transaction",
+      "description": "Builds an unsigned Solana transaction with the Vybe Solana API (see https://docs.vybenetwork.com) for a token swap, a token-account close, or an MEV withdrawal, and returns it as base64 for the user to review and sign in their own wallet. This tool never signs, submits, or broadcasts a transaction, never moves funds on its own, and never accepts private keys. Use query-vybe-api with /v4/trading/swap-quote first when the user only wants a price quote.",
+      "action_name": "build-vybe-transaction",
+      "input_json_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {
+          "body": {
+            "additionalProperties": true,
+            "description": "JSON request body for the endpoint. Call get-endpoint for the exact schema.",
+            "type": "object"
+          },
+          "path": {
+            "description": "Transaction builder endpoint to call.",
+            "enum": [
+              "/v4/trading/swap",
+              "/v4/wallets/util/close-token-accounts",
+              "/v4/wallets/util/withdraw-mev"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "body"
+        ],
+        "type": "object"
+      },
+      "output_json_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "body": {},
+          "status": {
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "capability_labels": [
+        "open_world",
+        "destructive"
+      ],
+      "provided_tool_annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      },
+      "templates": null,
+      "supported_auth_override": null,
+      "tool_invoking_message": "",
+      "tool_invoked_message": "",
+      "metadata": {},
+      "description_model": null,
+      "visibility": "public"
+    },
+    {
+      "name": "Pay With X402",
+      "title": "Pay With X402",
+      "description": "Before calling any Vybe endpoint without an API key (e.g. AI agent, throwaway script, premium-only path), use this to access the same endpoint via x402 pay-per-call USDC on Solana.",
+      "action_name": "pay-with-x402",
+      "input_json_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "properties": {},
+        "type": "object"
+      },
+      "output_json_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "baseUrl": {
+            "type": "string"
+          },
+          "guidance": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "capability_labels": [
+        "read_only"
+      ],
+      "provided_tool_annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "templates": null,
+      "supported_auth_override": null,
+      "tool_invoking_message": "",
+      "tool_invoked_message": "",
+      "metadata": {},
+      "description_model": null,
+      "visibility": "public"
+    }
+  ],
+  "screenshots": [
+    {
+      "cdn_url": null,
+      "file_id": null,
+      "url": null,
+      "user_prompt": "List the available Vybe Solana API endpoints."
+    },
+    {
+      "cdn_url": null,
+      "file_id": null,
+      "url": null,
+      "user_prompt": "What’s the 24h volume, liquidity, and top holders for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263?"
+    },
+    {
+      "cdn_url": null,
+      "file_id": null,
+      "url": null,
+      "user_prompt": "Show realized and unrealized PnL for wallet CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o over the last 7 days."
+    }
+  ],
+  "subtitle": "Solana on-chain data and more.",
+  "supported_auth": [
+    {
+      "type": "OAUTH",
+      "allow_http_redirect": true,
+      "authorization_server_base": "https://mcp.vybenetwork.xyz",
+      "authorization_url": "https://mcp.vybenetwork.xyz/authorize",
+      "base_scopes": [],
+      "client_id_metadata_document_supported": true,
+      "custom_redirect_url_params": null,
+      "custom_token_request_params": null,
+      "default_scopes": [
+        "openid",
+        "email",
+        "mcp:read",
+        "mcp:write"
+      ],
+      "grant_type": null,
+      "oidc_configuration_url": "https://mcp.vybenetwork.xyz/.well-known/openid-configuration",
+      "oidc_enabled": true,
+      "oidc_scopes_supported": [
+        "openid",
+        "email",
+        "mcp:read",
+        "mcp:write"
+      ],
+      "oidc_userinfo_endpoint": "https://mcp.vybenetwork.xyz/userinfo",
+      "pkce_methods": [
+        "S256"
+      ],
+      "pkce_required": true,
+      "registration_url": "https://mcp.vybenetwork.xyz/register",
+      "resource": "https://mcp.vybenetwork.xyz/mcp",
+      "revocation_url": null,
+      "scope_param": "scope",
+      "scope_separator": " ",
+      "scopes_supported": [
+        "openid",
+        "email",
+        "mcp:read",
+        "mcp:write"
+      ],
+      "supports_domain_restriction": true,
+      "token_endpoint_auth_methods_supported": [
+        "none"
+      ],
+      "token_url": "https://mcp.vybenetwork.xyz/token",
+      "use_cimd": true
+    }
+  ],
+  "template_params": null,
+  "test_cases": [
+    {
+      "description": "List the full Vybe API catalog from schema discovery.",
+      "expected_output": "Returns 35+ Vybe API paths with HTTP methods and summaries across tokens, wallets, markets, trades, transfers, and trading utilities.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": "list-endpoints",
+      "user_prompt": "List all available Vybe API endpoints."
+    },
+    {
+      "description": "Search the catalog for token-holder endpoints.",
+      "expected_output": "Returns matching holder endpoints such as holder count history and top holders, with paths that can be passed to get-endpoint.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": "search-endpoints",
+      "user_prompt": "Find all Vybe endpoints related to token holders."
+    },
+    {
+      "description": "Inspect the Wallet PnL endpoint contract before querying it.",
+      "expected_output": "Returns the OpenAPI spec for GET /v4/wallets/{ownerAddress}/pnl, including ownerAddress, resolution, sorting, pagination, auth, and response fields.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": "get-endpoint",
+      "user_prompt": "Show me the parameters for the Wallet PnL endpoint."
+    },
+    {
+      "description": "Run a live leaderboard query against the Vybe API.",
+      "expected_output": "Returns three trader wallets with realized PnL, win rate, volume, and related metrics from the live Top Traders endpoint.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": "query-vybe-api",
+      "user_prompt": "Get the top 3 Solana traders by realized PnL today."
+    },
+    {
+      "description": "Explain pay-per-call access when no API key is available.",
+      "expected_output": "Returns x402 integration guidance, including the x402 API base URL, 402 payment flow, SDK usage, and that this tool itself does not move funds.",
+      "expected_output_url": null,
+      "file_attachment_urls": null,
+      "tools_triggered": "pay-with-x402",
+      "user_prompt": "I don't have a Vybe API key. How can an AI agent pay per call in USDC to query token details?"
+    }
+  ],
+  "test_credentials": "Login URL: https://mcp.vybenetwork.xyz/authorize\nTenant / workspace: Vybe Network (MCP OAuth)\nUsername / email: reviewer+openai@vybenetwork.com\nPassword / secret: [paste the dedicated Vybe API key here]\nSign-in steps:\n1. Start any authenticated tool in ChatGPT so OAuth opens.\n2. On the Vybe login page, enter the reviewer email and the API key above.\n3. Click Sign In, then Approve on the consent screen.\n4. No MFA, SMS, magic link, SSO, or VPN.\nNotes: Key is read-capable for Solana API demo queries only. Sample data is public Solana chain data.",
+  "tool_justifications": {
+    "list-endpoints": {
+      "destructive_justification": "Does not delete, overwrite, revoke access, or perform irreversible actions.",
+      "open_world_justification": "Reads the server's OpenAPI catalog and does not write to public internet state or third-party systems.",
+      "read_only_justification": "Only returns the catalog of Vybe API paths, HTTP methods, and summaries and does not create or update any data."
+    },
+    "get-endpoint": {
+      "destructive_justification": "Does not delete, overwrite, revoke access, or perform irreversible actions.",
+      "open_world_justification": "Returns stored API specification metadata and does not write to public internet state or third-party systems.",
+      "read_only_justification": "Only retrieves OpenAPI details for one path and method, including parameters, schemas, and auth, without modifying data."
+    },
+    "search-endpoints": {
+      "destructive_justification": "Does not delete, overwrite, revoke access, or perform irreversible actions.",
+      "open_world_justification": "Searches local API metadata and does not write to public internet state or third-party systems.",
+      "read_only_justification": "Only searches OpenAPI paths, operations, and parameters by keyword and returns matches without modifying data."
+    },
+    "query-vybe-api": {
+      "destructive_justification": "Read-only GET requests cannot delete, overwrite, revoke access, or perform irreversible actions.",
+      "open_world_justification": "Calls the live Vybe Solana API over the public internet and returns on-chain data about arbitrary wallets, tokens, and markets.",
+      "read_only_justification": "Issues GET requests only. The tool exposes no HTTP method parameter and the server always sends GET, so it cannot create, update, or delete any data."
+    },
+    "query-vybe-api-batch": {
+      "destructive_justification": "The allowlisted batch endpoints only read wallet data and cannot delete, overwrite, or revoke anything.",
+      "open_world_justification": "Calls the live Vybe Solana API over the public internet and returns on-chain data for caller-supplied wallet addresses.",
+      "read_only_justification": "Restricted by the server to the five /v4/wallets/batch/* read endpoints, which accept a POST body only to carry the list of wallet addresses and return balances and history without modifying data."
+    },
+    "build-vybe-transaction": {
+      "destructive_justification": "Marked destructive so the user is always prompted before a swap, token-account close, or MEV withdrawal payload is produced. The tool returns only a base64 unsigned transaction and never signs, submits, or broadcasts it, and never accepts private keys.",
+      "open_world_justification": "Calls the live Vybe Solana API over the public internet to price routes and build the transaction against current on-chain state.",
+      "read_only_justification": "Constructs a new unsigned Solana transaction rather than only reading existing data, so it is not a pure read."
+    },
+    "pay-with-x402": {
+      "destructive_justification": "Does not delete, overwrite, revoke access, or move funds.",
+      "open_world_justification": "Returns static integration instructions and does not write to public internet state or third-party systems.",
+      "read_only_justification": "Only returns x402 pay-per-call integration guidance and does not sign, submit, or settle any payment."
+    }
+  },
+  "translations": null,
+  "version": "1.2.0"
+}
