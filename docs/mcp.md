@@ -27,12 +27,14 @@ Registry remote (without path): `https://mcp.vybenetwork.xyz`
 }
 ```
 
-### Claude.ai custom connector
+### Claude.ai custom connector or Connectors Directory
 
 ```text
 Name: Solana MCP by Vybe
 URL:  https://mcp.vybenetwork.xyz/mcp
 ```
+
+Field-by-field portal copy lives in the repo as `claude-connector-submission.json`. Claude Code / Cowork plugin manifest: `.claude-plugin/plugin.json`.
 
 ### Claude Desktop (`mcp-remote`)
 

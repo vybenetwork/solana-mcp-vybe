@@ -52,12 +52,25 @@ Same snippet: [`examples/cursor-mcp.json`](examples/cursor-mcp.json).
 }
 ```
 
-### Claude.ai custom connector
+### Claude.ai custom connector or Connectors Directory
 
 ```text
 Name: Solana MCP by Vybe
 URL:  https://mcp.vybenetwork.xyz/mcp
 ```
+
+Portal copy for the official directory: [`claude-connector-submission.json`](claude-connector-submission.json).
+
+### Claude Code / Cowork plugin
+
+This repo is a Claude plugin (`/.claude-plugin/plugin.json`). Validate, then submit the public GitHub URL:
+
+```bash
+claude plugin validate .
+```
+
+- Claude.ai: https://claude.ai/admin-settings/directory/submissions/plugins/new
+- Console: https://platform.claude.com/plugins/submit
 
 Authenticate with **OAuth** when the client prompts. Do not commit API keys into this repo.
 
@@ -66,6 +79,8 @@ Authenticate with **OAuth** when the client prompts. Do not commit API keys into
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions). Remote URL: `https://mcp.vybenetwork.xyz`.
 - **`.mcp.json` and `mcp.json`** — root MCP/plugin configs for directory UIs (e.g. Cursor “Submit a Plugin”). Native HTTP to `https://mcp.vybenetwork.xyz/mcp` — **no secrets**.
 - **`.codex-plugin/plugin.json`** — Codex plugin metadata for local install/refresh against the same MCP URL.
+- **`.claude-plugin/plugin.json`** — Claude Code / Cowork plugin manifest (skills + remote MCP).
+- **`claude-connector-submission.json`** — field-by-field copy for the Claude Connectors Directory portal.
 - **`chatgpt-app-submission.json`** — draft ChatGPT Apps submission fields.
 
 ## Available tools

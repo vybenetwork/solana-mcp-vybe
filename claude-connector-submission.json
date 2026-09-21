@@ -1,0 +1,81 @@
+{
+  "kind": "claude_connectors_directory",
+  "notes": "Paste these values into claude.ai → Organization settings → Directory. This file is not uploaded as-is.",
+  "connection": {
+    "server_url": "https://mcp.vybenetwork.xyz/mcp",
+    "transport": "streamable_http",
+    "url_model": "universal"
+  },
+  "listing": {
+    "name": "Solana MCP by Vybe",
+    "tagline": "Live Solana wallet, token, and market data",
+    "description": "Solana MCP by Vybe is a developer toolkit for live Solana data: wallets, trades, markets, PnL, transfers, on-chain activity, signable swaps, and API tools. Ask for a wallet's balances, realized and unrealized PnL, counterparties, or token holdings. Look up token prices, holders, liquidity, and candles. Scan markets, DEX activity, trade history, and transfers. Pull top traders and labeled accounts without leaving Claude.\n\nBrowse the Vybe API catalog and inspect an endpoint's parameters. Then run authenticated live queries and get real results back. When you need a swap, close token accounts, or withdraw MEV, build-vybe-transaction returns a base64 unsigned payload for the user to review and sign in their own wallet. The connector never collects private keys and never broadcasts transactions.\n\nConnect with OAuth on mcp.vybenetwork.xyz.",
+    "categories": ["Developer Tools"],
+    "documentation_url": "https://docs.vybenetwork.com/docs/mcp",
+    "privacy_policy_url": "https://vybe.fyi/privacy",
+    "terms_of_service_url": "https://vybe.fyi/terms",
+    "support_contact": "https://vybe.fyi/settings/api",
+    "icon": "./assets/icon.png",
+    "slug": "solana-mcp-vybe"
+  },
+  "use_cases": {
+    "primary": [
+      "Wallet analytics: balances, holdings, realized and unrealized PnL, transfers, counterparties",
+      "Token and market intelligence: prices, holders, liquidity, candles, DEX trades, top traders",
+      "API exploration: list, search, and inspect Vybe OpenAPI routes, then run live reads"
+    ],
+    "prerequisites": "A Vybe account. OAuth on mcp.vybenetwork.xyz issues the API session. No private keys.",
+    "reads_and_writes": "both",
+    "write_explanation": "build-vybe-transaction constructs unsigned swap, close-token-account, and withdraw-MEV payloads. The user signs in their own wallet. The connector does not transfer assets, sign, or broadcast."
+  },
+  "company": {
+    "name": "Vybe Network",
+    "website": "https://vybe.fyi/",
+    "review_contact": "Use the submitting org Owner email"
+  },
+  "authentication": {
+    "mode": "oauth_dynamic_client_registration",
+    "registration_url": "https://mcp.vybenetwork.xyz/register",
+    "authorization_url": "https://mcp.vybenetwork.xyz/authorize",
+    "token_url": "https://mcp.vybenetwork.xyz/token",
+    "openid_configuration": "https://mcp.vybenetwork.xyz/.well-known/openid-configuration",
+    "scopes": ["openid", "email", "mcp:read", "mcp:write"]
+  },
+  "data_handling": {
+    "api_ownership": "first_party",
+    "api_base": "https://api.vybenetwork.xyz",
+    "personal_health_data": false,
+    "sponsored_content": false
+  },
+  "test_and_launch": {
+    "login_url": "https://mcp.vybenetwork.xyz/authorize",
+    "sign_in_steps": [
+      "Connect the connector so OAuth opens.",
+      "On the Vybe login page, sign in with the reviewer account.",
+      "Approve the consent screen.",
+      "No MFA, SMS, magic link, SSO, or VPN required for the reviewer account."
+    ],
+    "sample_prompts": [
+      "List all available Vybe API endpoints.",
+      "Show the parameters for the Wallet PnL endpoint.",
+      "Find all Vybe endpoints related to token holders.",
+      "Get the top 3 Solana traders by realized PnL today.",
+      "I don't have a Vybe API key. How can an AI agent pay per call in USDC to query token details?"
+    ]
+  },
+  "tools_expected": [
+    "list-endpoints",
+    "get-endpoint",
+    "search-endpoints",
+    "query-vybe-api",
+    "query-vybe-api-batch",
+    "build-vybe-transaction",
+    "pay-with-x402"
+  ],
+  "plugin_directory": {
+    "claude_ai": "https://claude.ai/admin-settings/directory/submissions/plugins/new",
+    "console": "https://platform.claude.com/plugins/submit",
+    "github_repo": "https://github.com/vybenetwork/solana-mcp-vybe",
+    "validate": "claude plugin validate ."
+  }
+}

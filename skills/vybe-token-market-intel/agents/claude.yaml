@@ -1,0 +1,15 @@
+interface:
+  display_name: "Vybe token & market intel"
+  short_description: "Prices, holders, DEX trades, and markets"
+  default_prompt: "Pull live Solana token price, holders, and market activity with Vybe."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "solana-mcp-vybe"
+      description: "Vybe Solana MCP server"
+      transport: "streamable_http"
+      url: "https://mcp.vybenetwork.xyz/mcp"

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "solana-mcp-vybe",
+  "version": "1.2.0",
+  "description": "Live Solana wallet, token, market, and API tools from Vybe. Discover endpoints, run authenticated reads, and build unsigned transactions.",
+  "author": {
+    "name": "Vybe Network",
+    "email": "support@vybenetwork.com",
+    "url": "https://vybe.fyi/"
+  },
+  "homepage": "https://docs.vybenetwork.com/docs/mcp",
+  "repository": "https://github.com/vybenetwork/solana-mcp-vybe",
+  "license": "MIT",
+  "keywords": [
+    "solana",
+    "crypto",
+    "wallet analytics",
+    "token data",
+    "onchain",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "mcpServers": "./.mcp.json"
+}
