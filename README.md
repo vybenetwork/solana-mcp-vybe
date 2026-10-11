@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/vybenetwork-solana-mcp-vybe-badge.png)](https://mseep.ai/app/vybenetwork-solana-mcp-vybe)
+
 # Solana MCP by Vybe
 
 Solana MCP by Vybe lets Cursor, Claude, Codex, and other MCP clients browse schemas or make live Solana API calls through one public MCP server.
