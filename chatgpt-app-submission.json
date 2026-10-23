@@ -80,7 +80,7 @@
         "destructive_justification": "Marked destructive so the user is always prompted before a swap, token-account close, or MEV withdrawal payload is produced. The tool itself returns only a base64 unsigned transaction and never signs, submits, or broadcasts it, and never accepts private keys."
       }
     },
-    "pay-with-x402": {
+    "get-x402-access-guide": {
       "annotations": {
         "readOnlyHint": true,
         "openWorldHint": false,
@@ -130,7 +130,7 @@
       "description": "Explain pay-per-call access when no API key is available.",
       "user_prompt": "I don't have a Vybe API key. How can an AI agent pay per call in USDC to query token details?",
       "file_attachment_urls": null,
-      "tools_triggered": "pay-with-x402",
+      "tools_triggered": "get-x402-access-guide",
       "expected_output": "Returns x402 integration guidance, including the x402 API base URL, 402 payment flow, SDK usage, and that this tool itself does not move funds.",
       "expected_output_url": null
     }

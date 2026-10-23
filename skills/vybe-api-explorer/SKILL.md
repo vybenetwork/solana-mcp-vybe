@@ -17,7 +17,7 @@ Guide developers through the Vybe OpenAPI catalog with MCP tools.
 | `query-vybe-api` | Live GET read of any `/v4` path |
 | `query-vybe-api-batch` | Live read across many wallets at once |
 | `build-vybe-transaction` | Unsigned swap / close-account / withdraw-MEV payload |
-| `pay-with-x402` | Pay-per-call integration guidance only |
+| `get-x402-access-guide` | Static x402 access guidance only. It does not send a payment. |
 
 ## Workflow
 
@@ -34,7 +34,7 @@ Guide developers through the Vybe OpenAPI catalog with MCP tools.
    - Endpoint path + method
    - Key request params used
    - Compact result summary (or error body)
-6. If the user wants paid / metered access patterns, call `pay-with-x402` and explain — do not invent payment flows.
+6. If the user wants paid / metered access patterns, call `get-x402-access-guide` and explain — do not invent payment flows. The tool returns guidance only and does not send a payment.
 
 ## Rules
 

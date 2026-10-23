@@ -70,7 +70,7 @@
     "query-vybe-api",
     "query-vybe-api-batch",
     "build-vybe-transaction",
-    "pay-with-x402"
+    "get-x402-access-guide"
   ],
   "plugin_directory": {
     "claude_ai": "https://claude.ai/admin-settings/directory/submissions/plugins/new",

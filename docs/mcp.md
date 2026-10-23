@@ -61,7 +61,7 @@ Authenticate with OAuth when prompted. Do not put API keys in git.
 | `query-vybe-api` | Live read of any `/v4` GET endpoint |
 | `query-vybe-api-batch` | Live read across many wallets in one call |
 | `build-vybe-transaction` | Unsigned swap / close-account / withdraw-MEV payload |
-| `pay-with-x402` | x402 pay-per-call integration guidance |
+| `get-x402-access-guide` | Static x402 pay-per-call guidance. Does not send a payment. |
 
 ## Test prompts
 
