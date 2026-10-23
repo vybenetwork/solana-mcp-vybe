@@ -80,16 +80,16 @@
         "destructive_justification": "Marked destructive so the user is always prompted before a swap, token-account close, or MEV withdrawal payload is produced. The tool itself returns only a base64 unsigned transaction and never signs, submits, or broadcasts it, and never accepts private keys."
       }
     },
-    "get-x402-access-guide": {
+    "pay-with-x402": {
       "annotations": {
-        "readOnlyHint": true,
-        "openWorldHint": false,
-        "destructiveHint": false
+        "readOnlyHint": false,
+        "openWorldHint": true,
+        "destructiveHint": true
       },
       "justifications": {
-        "read_only_justification": "Only returns x402 pay-per-call integration guidance and does not sign, submit, or settle any payment.",
-        "open_world_justification": "Returns static integration instructions and does not write to public internet state or third-party systems.",
-        "destructive_justification": "Does not delete, overwrite, revoke access, or move funds."
+        "read_only_justification": "Signs and settles a USDC payment for one Vybe API call, so it is not a pure read.",
+        "open_world_justification": "Calls the live x402 gateway over the public internet and transfers USDC on Solana.",
+        "destructive_justification": "Moves USDC from the server wallet. The tool does not accept a private key from the user."
       }
     }
   },
@@ -127,11 +127,11 @@
       "expected_output_url": null
     },
     {
-      "description": "Explain pay-per-call access when no API key is available.",
-      "user_prompt": "I don't have a Vybe API key. How can an AI agent pay per call in USDC to query token details?",
+      "description": "Pay per call in USDC when no API key is available.",
+      "user_prompt": "I don't have a Vybe API key. Pay per call in USDC and look up this token.",
       "file_attachment_urls": null,
-      "tools_triggered": "get-x402-access-guide",
-      "expected_output": "Returns x402 integration guidance, including the x402 API base URL, 402 payment flow, SDK usage, and that this tool itself does not move funds.",
+      "tools_triggered": "pay-with-x402",
+      "expected_output": "Settles a USDC payment through the x402 gateway and returns the Vybe API response for the requested /v4 path.",
       "expected_output_url": null
     }
   ],
