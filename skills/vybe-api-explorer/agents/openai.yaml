@@ -1,7 +1,7 @@
 interface:
   display_name: "Vybe API explorer"
-  short_description: "Discover, inspect, and call Vybe Solana APIs"
-  default_prompt: "Help me find the right Vybe API endpoint and run a live request."
+  short_description: "Call one Vybe Solana API tool"
+  default_prompt: "Get the top Solana traders today with Vybe."
 
 policy:
   allow_implicit_invocation: true
