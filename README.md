@@ -93,7 +93,7 @@ Authenticate with **OAuth** when the client prompts. Do not commit API keys into
 | `query-vybe-api` | Live authenticated read of any `/v4` GET endpoint |
 | `query-vybe-api-batch` | Live authenticated read across many wallets in one call |
 | `build-vybe-transaction` | Unsigned swap / close-account / withdraw-MEV payload |
-| `pay-with-x402` | Pays USDC for one `/v4` call through the x402 gateway and returns the API response. |
+| `get-x402-access-guide` | Static x402 pay-per-call guidance. Does not send a payment. |
 
 ## GitHub repository name
 
