@@ -16,7 +16,10 @@
   "privacyPolicyUrl": "https://vybe.fyi/privacy",
   "termsOfServiceUrl": "https://vybe.fyi/terms",
   "classification": {
-    "categories": ["Developer Tools"]
+    "object_acted_on": ["wallets", "tokens", "markets"],
+    "work_department": "engineering",
+    "industry": "software-saas",
+    "subject": "computing"
   },
   "repository": "https://github.com/vybenetwork/solana-mcp-vybe",
   "license": "MIT",
