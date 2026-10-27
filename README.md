@@ -1,8 +1,18 @@
 # Solana MCP by Vybe
 
-Solana MCP by Vybe lets Cursor, Claude, Codex, and other MCP clients browse schemas or make live Solana API calls through one public MCP server.
+Solana MCP by Vybe is a developer toolkit for live Solana data: wallets, trades, markets, transfers, and signable swaps. The public server publishes **44 tools**. Each tool calls one Vybe API endpoint.
 
-Public **Model Context Protocol (MCP) registry metadata** for **Solana MCP by Vybe**.
+`build-swap`, `build-close-token-accounts`, and `build-withdraw-mev` return an unsigned transaction to sign in your own wallet. The server does not take private keys, and it does not broadcast transactions. `get-x402-access-guide` returns x402 pay-per-call instructions and does not send a payment.
+
+This repo is the directory listing, Claude plugin, and MCP registry metadata. The running server is [`vybenetwork/vybe-mcp-oauth-proxy`](https://github.com/vybenetwork/vybe-mcp-oauth-proxy). Its current version is **1.3.2**.
+
+## Versions
+
+| Piece | Version | Where |
+| --- | --- | --- |
+| Live MCP server | 1.3.2 | `initialize` on `https://mcp.vybenetwork.xyz/mcp` |
+| Claude plugin | 1.3.0 | `.claude-plugin/plugin.json` |
+| MCP registry metadata | 1.1.3 | `server.json` |
 
 ## MCP endpoint
 
@@ -20,7 +30,7 @@ https://mcp.vybenetwork.xyz
 
 Clients that require an explicit MCP path (ChatGPT Developer Mode, Codex, Cursor HTTP) should use **`https://mcp.vybenetwork.xyz/mcp`**.
 
-Copy-paste setup for the public docs site: [`docs/mcp.md`](docs/mcp.md). Live product guides: [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp) (still may show the old `.com` host until that site is updated).
+Short setup page in this repo: [`docs/mcp.md`](docs/mcp.md). The public guide at [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp) still describes the old tools `list-endpoints`, `search-endpoints`, `get-endpoint`, and `execute-request`. Those names are not in the published tool list.
 
 ## Quick setup
 
@@ -72,18 +82,32 @@ claude plugin validate .
 - Claude.ai: https://claude.ai/admin-settings/directory/submissions/plugins/new
 - Console: https://platform.claude.com/plugins/submit
 
-Authenticate with **OAuth** when the client prompts. Do not commit API keys into this repo.
+Sign in with **OAuth** when the client asks. Use your Vybe email as the username and your API key as the password, then approve consent. Do not commit API keys or private keys into this repo.
+
+Claude directory links from `.claude-plugin/plugin.json`:
+
+- Homepage: https://docs.vybenetwork.com
+- Documentation: https://docs.vybenetwork.com/docs/mcp
+- Support: https://vybe.fyi/settings/api
+- Privacy: https://vybe.fyi/privacy
+- Terms: https://vybe.fyi/terms
+
+Classification on that manifest: acts on `apis` and `finances`, department `engineering`, industry `software-saas`, subject `computing`. `claude plugin validate` on Claude Code 2.1.138 reports the directory-only fields (`displayName`, `icon`, links, `classification`) as unrecognized. The plugin directory accepts them.
 
 ## What this repository holds
 
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions). Remote URL: `https://mcp.vybenetwork.xyz`.
 - **`.mcp.json` and `mcp.json`** — root MCP/plugin configs for directory UIs (e.g. Cursor “Submit a Plugin”). Native HTTP to `https://mcp.vybenetwork.xyz/mcp` — **no secrets**.
 - **`.codex-plugin/plugin.json`** — Codex plugin metadata for local install/refresh against the same MCP URL.
-- **`.claude-plugin/plugin.json`** — Claude Code / Cowork plugin manifest (skills + remote MCP).
+- **`.claude-plugin/plugin.json`** — Claude Code / Cowork plugin manifest (skills, commands, remote MCP, directory links, and classification).
+- **`skills/`** — `vybe-api-explorer`, `vybe-token-market-intel`, and `vybe-wallet-analytics`.
+- **`commands/connect-vybe.md`** — Claude command for the OAuth sign-in steps.
 - **`claude-connector-submission.json`** — field-by-field copy for the Claude Connectors Directory portal.
 - **`chatgpt-app-submission.json`** — draft ChatGPT Apps submission fields.
 
 ## Available tools
+
+Published `tools/list` has these 44 tools. Pass each tool's own arguments. Do not pass a URL, path, or HTTP method.
 
 | Tool | Calls |
 | --- | --- |
@@ -101,7 +125,7 @@ Authenticate with **OAuth** when the client prompts. Do not commit API keys into
 | `list-supported-dexes` | GET `/v4/reference/dexes` |
 | `get-token-liquidity` | GET `/v4/tokens/{mintAddress}/liquidity` |
 | `get-token` | GET `/v4/tokens/{mintAddress}` |
-| `get-token-holder-count-history` | GET `/v4/tokens/{mintAddress}/holders-count-ts` |
+| `get-token-holder-count-history` | GET `/v4/tokens/{mintAddress}/holders-count-ts`. Requires `startTime` and `endTime` as unix seconds, at most 2592000 seconds (30 days) apart. `interval` is `hour` or `day`. |
 | `list-instruction-names` | GET `/v4/reference/instruction-names` |
 | `get-token-trader-activity` | GET `/v4/tokens/{mintAddress}/trader-activity` |
 | `get-token-top-pnl-traders` | GET `/v4/tokens/{mintAddress}/top-pnl-traders` |
@@ -132,6 +156,8 @@ Authenticate with **OAuth** when the client prompts. Do not commit API keys into
 | `build-withdraw-mev` | POST `/v4/wallets/util/withdraw-mev` |
 | `get-x402-access-guide` | Static x402 pay-per-call guidance. Does not send a payment. |
 
+`build-swap`, `build-close-token-accounts`, and `build-withdraw-mev` return an unsigned transaction. They do not sign or broadcast it. The five `*-batch` tools POST a list of wallet addresses and only read data.
+
 ## GitHub repository name
 
 **`vybenetwork/solana-mcp-vybe`** (starts with `solana-mcp`, includes Vybe).
@@ -142,9 +168,11 @@ Authenticate with **OAuth** when the client prompts. Do not commit API keys into
 2. Tag and push (the workflow sets `server.json` `version` from the tag):
 
    ```bash
-   git tag v1.0.0
-   git push origin v1.0.0
+   git tag vX.Y.Z
+   git push origin vX.Y.Z
    ```
+
+   `server.json` is currently **1.1.3**. The next registry tag should be newer than that. A tag push rewrites `server.json` `version` from the tag during the workflow.
 
    Or run **Actions → Publish to MCP Registry → Run workflow** (uses the version already in `server.json`).
 
