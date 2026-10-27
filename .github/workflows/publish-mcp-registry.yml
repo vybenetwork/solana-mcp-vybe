@@ -30,8 +30,15 @@ jobs:
           cat server.json
 
       - name: Install mcp-publisher
+        env:
+          PUBLISHER_VERSION: v1.8.6
+          PUBLISHER_SHA256: 1fbe93fc0783c2394d8012c8d6e50a59e98cb2cc2d216264cc69f405d0e21340
         run: |
-          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+          archive="$(mktemp)"
+          curl -fL --retry 3 --output "$archive" \
+            "https://github.com/modelcontextprotocol/registry/releases/download/${PUBLISHER_VERSION}/mcp-publisher_linux_amd64.tar.gz"
+          echo "${PUBLISHER_SHA256}  ${archive}" | sha256sum --check -
+          tar -xzf "$archive" mcp-publisher
           chmod +x mcp-publisher
           ./mcp-publisher --version
 

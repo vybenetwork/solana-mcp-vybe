@@ -57,10 +57,10 @@
   "test_and_launch": {
     "login_url": "https://mcp.vybenetwork.xyz/authorize",
     "sign_in_steps": [
-      "Connect the connector so OAuth opens.",
-      "On the Vybe login page, sign in with the reviewer account.",
-      "Approve the consent screen.",
-      "No MFA, SMS, magic link, SSO, or VPN required for the reviewer account."
+      "Connect the connector so the Vybe login popup opens.",
+      "Enter the reviewer email in the username field and the reviewer API key in the password field.",
+      "Sign in, then approve the consent screen.",
+      "No MFA, SMS, magic link, SSO, or VPN is required."
     ],
     "sample_prompts": [
       "Get the top 3 Solana traders by realized PnL today.",
