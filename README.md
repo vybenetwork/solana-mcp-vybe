@@ -92,7 +92,7 @@ Claude directory links from `.claude-plugin/plugin.json`:
 - Privacy: https://vybe.fyi/privacy
 - Terms: https://vybe.fyi/terms
 
-Classification on that manifest: acts on `apis` and `finances`, department `engineering`, industry `software-saas`, subject `computing`. `claude plugin validate` on Claude Code 2.1.138 reports the directory-only fields (`displayName`, `icon`, links, `classification`) as unrecognized. The plugin directory accepts them.
+Classification on that manifest: acts on `apis`, `finances`, `code`, and `databases`, department `engineering`, industry `software-saas`, subject `computing`. `claude plugin validate` on Claude Code 2.1.138 reports the directory-only fields (`displayName`, `icon`, links, `classification`) as unrecognized. The plugin directory accepts them.
 
 ## What this repository holds
 
