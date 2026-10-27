@@ -16,7 +16,7 @@
   "privacyPolicyUrl": "https://vybe.fyi/privacy",
   "termsOfServiceUrl": "https://vybe.fyi/terms",
   "classification": {
-    "object_acted_on": ["wallets", "tokens", "markets"],
+    "object_acted_on": ["apis", "finances"],
     "work_department": "engineering",
     "industry": "software-saas",
     "subject": "computing"
