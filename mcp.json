@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "solana-mcp-vybe": {
-      "type": "http",
-      "url": "https://mcp.vybenetwork.xyz/mcp"
-    }
-  }
-}

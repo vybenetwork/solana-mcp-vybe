@@ -30,7 +30,7 @@ https://mcp.vybenetwork.xyz
 
 Clients that require an explicit MCP path (ChatGPT Developer Mode, Codex, Cursor HTTP) should use **`https://mcp.vybenetwork.xyz/mcp`**.
 
-Short setup page in this repo: [`docs/mcp.md`](docs/mcp.md). The public guide at [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp) still describes the old tools `list-endpoints`, `search-endpoints`, `get-endpoint`, and `execute-request`. Those names are not in the published tool list.
+The public guide at [docs.vybenetwork.com/docs/mcp](https://docs.vybenetwork.com/docs/mcp) still describes the old tools `list-endpoints`, `search-endpoints`, `get-endpoint`, and `execute-request`. Those names are not in the published tool list.
 
 ## Quick setup
 
@@ -47,7 +47,7 @@ Short setup page in this repo: [`docs/mcp.md`](docs/mcp.md). The public guide at
 }
 ```
 
-Same snippet: [`examples/cursor-mcp.json`](examples/cursor-mcp.json).
+Same snippet: [`.mcp.json`](.mcp.json).
 
 ### Claude Desktop via `mcp-remote`
 
@@ -68,8 +68,6 @@ Same snippet: [`examples/cursor-mcp.json`](examples/cursor-mcp.json).
 Name: Solana MCP by Vybe
 URL:  https://mcp.vybenetwork.xyz/mcp
 ```
-
-Portal copy for the official directory: [`claude-connector-submission.json`](claude-connector-submission.json).
 
 ### Claude Code / Cowork plugin
 
@@ -97,13 +95,11 @@ Classification on that manifest: acts on `apis`, `finances`, `code`, and `databa
 ## What this repository holds
 
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions). Remote URL: `https://mcp.vybenetwork.xyz`.
-- **`.mcp.json` and `mcp.json`** — root MCP/plugin configs for directory UIs (e.g. Cursor “Submit a Plugin”). Native HTTP to `https://mcp.vybenetwork.xyz/mcp` — **no secrets**.
-- **`.codex-plugin/plugin.json`** — Codex plugin metadata for local install/refresh against the same MCP URL.
+- **`.mcp.json`** — MCP server URL for the Claude and Codex plugins. Native HTTP to `https://mcp.vybenetwork.xyz/mcp`. No secrets.
+- **`.codex-plugin/plugin.json`** — Codex plugin metadata for local install against the same MCP URL.
 - **`.claude-plugin/plugin.json`** — Claude Code / Cowork plugin manifest (skills, commands, remote MCP, directory links, and classification).
 - **`skills/`** — `vybe-api-explorer`, `vybe-token-market-intel`, and `vybe-wallet-analytics`.
 - **`commands/connect-vybe.md`** — Claude command for the OAuth sign-in steps.
-- **`claude-connector-submission.json`** — field-by-field copy for the Claude Connectors Directory portal.
-- **`chatgpt-app-submission.json`** — draft ChatGPT Apps submission fields.
 
 ## Available tools
 
@@ -188,7 +184,7 @@ Publishing uses **GitHub OIDC** in Actions; no personal token secret is required
 
 ## Cursor and other directories
 
-Use `examples/cursor-mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; use **OAuth** for `https://mcp.vybenetwork.xyz/mcp`.
+Use `.mcp.json` as the install snippet. For [Cursor Directory](https://cursor.directory), submit after the registry publish succeeds; use **OAuth** for `https://mcp.vybenetwork.xyz/mcp`.
 
 ## Registry catalog id
 
