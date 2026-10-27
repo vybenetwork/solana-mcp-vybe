@@ -3,7 +3,7 @@
   "name": "solana-mcp-vybe",
   "displayName": "Solana MCP by Vybe",
   "version": "1.3.0",
-  "description": "Solana MCP by Vybe is a developer toolkit for live Solana data: wallets, trades, markets, transfers, and signable swaps. Ask for wallet balances, PnL, holdings, prices, holders, liquidity, and candles; scan markets, trades, and transfers; or pull top traders and labeled accounts.\n\nEach tool calls one Vybe API endpoint. Build-swap, build-close-token-accounts, and build-withdraw-mev return an unsigned transaction to sign in your own wallet. It does not take private keys or broadcast transactions.",
+  "description": "Solana MCP by Vybe is a developer toolkit for live Solana data: wallets, trades, markets, transfers, and signable swaps. Ask for balances, PnL, holdings, prices, holders, and candles; scan markets, trades, and transfers; or pull top traders and labeled accounts.\n\nEach tool calls one Vybe API endpoint. Unsigned transactions from build-swap, build-close-token-accounts, and build-withdraw-mev are returned to sign in your wallet. It does not take private keys, and it does not broadcast transactions.",
   "author": {
     "name": "Vybe Network",
     "email": "support@vybenetwork.com",
