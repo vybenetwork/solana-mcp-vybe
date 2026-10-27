@@ -3,7 +3,7 @@
   "name": "solana-mcp-vybe",
   "displayName": "Solana MCP by Vybe",
   "version": "1.3.0",
-  "description": "Live Solana wallet, token, market, and API tools from Vybe. Each tool calls one Vybe API endpoint. Unsigned swap, close-account, and withdraw payloads are returned for the user to sign.",
+  "description": "Solana on-chain data and more.",
   "author": {
     "name": "Vybe Network",
     "email": "support@vybenetwork.com",
