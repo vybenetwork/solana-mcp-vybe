@@ -90,14 +90,14 @@ Claude directory links from `.claude-plugin/plugin.json`:
 - Privacy: https://vybe.fyi/privacy
 - Terms: https://vybe.fyi/terms
 
-Classification on that manifest: acts on `apis`, `finances`, `code`, and `databases`, department `engineering`, industry `software-saas`, subject `computing`. `claude plugin validate` on Claude Code 2.1.138 reports the directory-only fields (`displayName`, `icon`, links, `classification`) as unrecognized. The plugin directory accepts them.
+`icon`, `documentationUrl`, `supportUrl`, `privacyPolicyUrl`, and `termsOfServiceUrl` are directory listing fields. Leave them in `plugin.json`. Do not add `classification`. The directory check does not accept it.
 
 ## What this repository holds
 
 - **`server.json`** — metadata published to the [official MCP Registry](https://registry.modelcontextprotocol.io) (GitHub Actions). Remote URL: `https://mcp.vybenetwork.xyz`.
 - **`.mcp.json`** — MCP server URL for the Claude and Codex plugins. Native HTTP to `https://mcp.vybenetwork.xyz/mcp`. No secrets.
 - **`.codex-plugin/plugin.json`** — Codex plugin metadata for local install against the same MCP URL.
-- **`.claude-plugin/plugin.json`** — Claude Code / Cowork plugin manifest (skills, commands, remote MCP, directory links, and classification).
+- **`.claude-plugin/plugin.json`** — Claude Code / Cowork plugin manifest (skills, commands, remote MCP, and directory links).
 - **`skills/`** — `vybe-api-explorer`, `vybe-token-market-intel`, and `vybe-wallet-analytics`.
 - **`commands/connect-vybe.md`** — Claude command for the OAuth sign-in steps.
 
