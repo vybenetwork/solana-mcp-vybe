@@ -33,7 +33,6 @@ Call the one token, market, or trade tool that matches the question. Pass `mintA
 | `list-transfers` | GET `/v4/transfers` |
 | `get-swap-quote` | GET `/v4/trading/swap-quote` |
 | `get-token-trade-volume-history` | GET `/v4/tokens/{mintAddress}/trade-volume-ts` |
-| `build-swap` | POST `/v4/trading/swap` |
 | `list-trades` | GET `/v4/trades` |
 
 ## When to use
@@ -44,8 +43,7 @@ Call the one token, market, or trade tool that matches the question. Pass `mintA
 - Candles → `get-token-candles` or `get-market-candles`
 - Trades or transfers → `list-trades` or `list-transfers`
 - Leaderboard → `list-top-traders`
-- A price quote without a transaction → `get-swap-quote`
-- An unsigned swap → `build-swap`
+- A price quote → `get-swap-quote`. It returns a quote only, not a transaction.
 
 ## Workflow
 
@@ -58,5 +56,5 @@ Call the one token, market, or trade tool that matches the question. Pass `mintA
 
 - Prefer mint addresses over ambiguous ticker symbols when both exist.
 - Call out incomplete data instead of inventing figures.
-- `build-swap` returns an unsigned transaction. Use it only when the user asks for a swap, and tell them to sign it in their own wallet.
+- Do not build or return a transaction. A swap request stops at `get-swap-quote`.
 - Auth failures → ask the user to reconnect OAuth on `mcp.vybenetwork.xyz`.

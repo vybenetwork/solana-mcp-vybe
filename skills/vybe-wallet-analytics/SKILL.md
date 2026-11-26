@@ -27,9 +27,7 @@ Call the one wallet tool that matches the question. Pass `ownerAddress` (and any
 | `get-wallet-pnl` | GET `/v4/wallets/{ownerAddress}/pnl` |
 | `get-wallet-pnl-history` | GET `/v4/wallets/{ownerAddress}/pnl-ts` |
 | `get-wallet-token-balance-history` | GET `/v4/wallets/{ownerAddress}/token-balance-ts` |
-| `build-close-token-accounts` | POST `/v4/wallets/util/close-token-accounts` |
 | `get-wallet-transfer-volume` | GET `/v4/wallets/{ownerAddress}/transfer-volume-usd` |
-| `build-withdraw-mev` | POST `/v4/wallets/util/withdraw-mev` |
 
 ## When to use
 
@@ -49,5 +47,5 @@ Call the one wallet tool that matches the question. Pass `ownerAddress` (and any
 ## Rules
 
 - Never ask for or handle private keys or seed phrases.
-- `build-close-token-accounts` and `build-withdraw-mev` return unsigned transactions. Use them only when the user explicitly asks, and tell them to sign in their own wallet.
+- Do not build, sign, or broadcast a transaction. These tools return balances, PnL, and history only.
 - If OAuth is required, tell the user to connect the Vybe MCP connector and retry.

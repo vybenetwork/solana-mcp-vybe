@@ -1,8 +1,8 @@
 # Solana MCP by Vybe
 
-Solana MCP by Vybe is a developer toolkit for live Solana data: wallets, trades, markets, transfers, and signable swaps. The public server publishes **44 tools**. Each tool calls one Vybe API endpoint.
+Solana MCP by Vybe is a developer toolkit for live Solana data: wallets, trades, markets, and transfers. The public server publishes **41 tools**. Each tool calls one Vybe API endpoint and returns data. None of them build a transaction for the user to sign.
 
-`build-swap`, `build-close-token-accounts`, and `build-withdraw-mev` return an unsigned transaction to sign in your own wallet. The server does not take private keys, and it does not broadcast transactions. `get-x402-access-guide` returns x402 pay-per-call instructions and does not send a payment.
+`get-swap-quote` returns a quote only. `get-x402-access-guide` returns pay-per-call instructions and does not send a payment.
 
 This repo is the directory listing, Claude plugin, and MCP registry metadata. The running server is [`vybenetwork/vybe-mcp-oauth-proxy`](https://github.com/vybenetwork/vybe-mcp-oauth-proxy). Its current version is **1.3.2**.
 
@@ -103,7 +103,7 @@ Claude directory links from `.claude-plugin/plugin.json`:
 
 ## Available tools
 
-Published `tools/list` has these 44 tools. Pass each tool's own arguments. Do not pass a URL, path, or HTTP method.
+Published `tools/list` has these 41 tools. Pass each tool's own arguments. Do not pass a URL, path, or HTTP method.
 
 | Tool | Calls |
 | --- | --- |
@@ -129,7 +129,6 @@ Published `tools/list` has these 44 tools. Pass each tool's own arguments. Do no
 | `list-transfers` | GET `/v4/transfers` |
 | `get-swap-quote` | GET `/v4/trading/swap-quote` |
 | `get-token-trade-volume-history` | GET `/v4/tokens/{mintAddress}/trade-volume-ts` |
-| `build-swap` | POST `/v4/trading/swap` |
 | `list-trades` | GET `/v4/trades` |
 | `get-empty-accounts-batch` | POST `/v4/wallets/batch/empty-accounts` |
 | `get-dust-accounts-batch` | POST `/v4/wallets/batch/dust-accounts` |
@@ -147,12 +146,10 @@ Published `tools/list` has these 44 tools. Pass each tool's own arguments. Do no
 | `get-wallet-pnl` | GET `/v4/wallets/{ownerAddress}/pnl` |
 | `get-wallet-pnl-history` | GET `/v4/wallets/{ownerAddress}/pnl-ts` |
 | `get-wallet-token-balance-history` | GET `/v4/wallets/{ownerAddress}/token-balance-ts` |
-| `build-close-token-accounts` | POST `/v4/wallets/util/close-token-accounts` |
 | `get-wallet-transfer-volume` | GET `/v4/wallets/{ownerAddress}/transfer-volume-usd` |
-| `build-withdraw-mev` | POST `/v4/wallets/util/withdraw-mev` |
 | `get-x402-access-guide` | Static x402 pay-per-call guidance. Does not send a payment. |
 
-`build-swap`, `build-close-token-accounts`, and `build-withdraw-mev` return an unsigned transaction. They do not sign or broadcast it. The five `*-batch` tools POST a list of wallet addresses and only read data.
+The five `*-batch` tools POST a list of wallet addresses and only read data. No tool returns a transaction to sign.
 
 ## GitHub repository name
 

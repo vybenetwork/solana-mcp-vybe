@@ -1,6 +1,6 @@
 ---
 name: vybe-api-explorer
-description: Call one specific Vybe Solana API tool for wallets, tokens, markets, trades, or unsigned transactions. Use when the user wants live Vybe data or a signable Solana payload.
+description: Call one specific Vybe Solana API tool for wallets, tokens, markets, or trades. Use when the user wants live Vybe data.
 ---
 
 # Vybe API explorer
@@ -33,7 +33,6 @@ Each tool calls one Vybe endpoint. Pass that tool's arguments directly. Do not p
 | `list-transfers` | GET `/v4/transfers` |
 | `get-swap-quote` | GET `/v4/trading/swap-quote` |
 | `get-token-trade-volume-history` | GET `/v4/tokens/{mintAddress}/trade-volume-ts` |
-| `build-swap` | POST `/v4/trading/swap` |
 | `list-trades` | GET `/v4/trades` |
 | `get-empty-accounts-batch` | POST `/v4/wallets/batch/empty-accounts` |
 | `get-dust-accounts-batch` | POST `/v4/wallets/batch/dust-accounts` |
@@ -51,9 +50,7 @@ Each tool calls one Vybe endpoint. Pass that tool's arguments directly. Do not p
 | `get-wallet-pnl` | GET `/v4/wallets/{ownerAddress}/pnl` |
 | `get-wallet-pnl-history` | GET `/v4/wallets/{ownerAddress}/pnl-ts` |
 | `get-wallet-token-balance-history` | GET `/v4/wallets/{ownerAddress}/token-balance-ts` |
-| `build-close-token-accounts` | POST `/v4/wallets/util/close-token-accounts` |
 | `get-wallet-transfer-volume` | GET `/v4/wallets/{ownerAddress}/transfer-volume-usd` |
-| `build-withdraw-mev` | POST `/v4/wallets/util/withdraw-mev` |
 | `get-x402-access-guide` | Static x402 pay-per-call guidance. Does not send a payment. |
 
 ## Workflow
@@ -68,5 +65,5 @@ Each tool calls one Vybe endpoint. Pass that tool's arguments directly. Do not p
 
 - Never put API keys in repo files or chat logs when avoidable; prefer the OAuth MCP session.
 - Do not invent a tool that is not in this list.
-- `build-swap`, `build-close-token-accounts`, and `build-withdraw-mev` return an unsigned payload. Confirm intent, then tell the user to sign it in their own wallet.
+- Do not build, sign, or broadcast a transaction. `get-swap-quote` returns a quote only.
 - Prefer the smallest successful request (low `limit`) before large pulls.
